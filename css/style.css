@@ -217,13 +217,19 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .temp .temp-logo {
+    max-width: 60%;
+  }
+}
+
 @media (max-width: 576px) {
   .temp p {
-    max-width: 65%;
+    max-width: 75%;
     font-size: 20px;
   }
   .temp .temp-logo {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 /*# sourceMappingURL=style.css.map */
