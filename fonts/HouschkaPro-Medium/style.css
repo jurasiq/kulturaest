@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Houschka Pro';
-    src: local('Houschka Pro Medium'), local('Houschka-Pro-Medium'),
-        url('HouschkaPro-Medium.woff2') format('woff2'),
-        url('HouschkaPro-Medium.woff') format('woff'),
-        url('HouschkaPro-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }

@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'Houschka Pro';
+	src: local('../fonts/HouschkaPro-Medium/Houschka Pro Medium'), local('Houschka-Pro-Medium'),
+			url('../fonts/HouschkaPro-Medium/HouschkaPro-Medium.woff2') format('woff2'),
+			url('../fonts/HouschkaPro-Medium.woff') format('woff'),
+			url('../fonts/HouschkaPro-Medium/HouschkaPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Houschka Pro';
+	src: local('../fonts/HouschkaPro-Bold/Houschka Pro Bold'), local('Houschka-Pro-Bold'),
+			url('../fonts/HouschkaPro-Bold/HouschkaPro-Bold.woff2') format('woff2'),
+			url('../fonts/HouschkaPro-Bold/HouschkaPro-Bold.woff') format('woff'),
+			url('../fonts/HouschkaPro-Bold/HouschkaPro-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@mixin medium {
+	font-family: 'HouschkaPro-Medium', sans-serif;
+}
+
+@mixin bold {
+	font-family: 'HouschkaPro-Bold', sans-serif;
+}
