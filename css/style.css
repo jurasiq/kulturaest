@@ -1,22 +1,42 @@
 @font-face {
-	font-family: 'Houschka Pro';
-	src: local("../fonts/HouschkaPro-Medium/Houschka Pro Medium"), local("Houschka-Pro-Medium"), url("../fonts/HouschkaPro-Medium/HouschkaPro-Medium.woff2") format("woff2"), url("../fonts/HouschkaPro-Medium.woff") format("woff"), url("../fonts/HouschkaPro-Medium/HouschkaPro-Medium.ttf") format("truetype");
-	font-weight: 500;
-	font-style: normal;
+  font-family: 'Houschka Pro';
+  src: local("../fonts/HouschkaPro-Medium/Houschka Pro Medium"), local("Houschka-Pro-Medium"), url("../fonts/HouschkaPro-Medium/HouschkaPro-Medium.woff2") format("woff2"), url("../fonts/HouschkaPro-Medium.woff") format("woff"), url("../fonts/HouschkaPro-Medium/HouschkaPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Houschka Pro';
-	src: local("../fonts/HouschkaPro-Bold/Houschka Pro Bold"), local("Houschka-Pro-Bold"), url("../fonts/HouschkaPro-Bold/HouschkaPro-Bold.woff2") format("woff2"), url("../fonts/HouschkaPro-Bold/HouschkaPro-Bold.woff") format("woff"), url("../fonts/HouschkaPro-Bold/HouschkaPro-Bold.ttf") format("truetype");
-	font-weight: 700;
-	font-style: normal;
+  font-family: 'Houschka Pro';
+  src: local("../fonts/HouschkaPro-Bold/Houschka Pro Bold"), local("Houschka-Pro-Bold"), url("../fonts/HouschkaPro-Bold/HouschkaPro-Bold.woff2") format("woff2"), url("../fonts/HouschkaPro-Bold/HouschkaPro-Bold.woff") format("woff"), url("../fonts/HouschkaPro-Bold/HouschkaPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
-	background-color: #00033A;
-	min-width: 320px;
-	color: #fff;
-	font-family: 'HouschkaPro-Medium', sans-serif;
-	font-size: 16px;
+  background-color: #00033a;
+  min-width: 320px;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  min-height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.hd-title-sign {
+  display: block;
+  width: 435px;
+  position: absolute;
+  left: 30px;
+  bottom: 78px;
+}
+
+.header-image {
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */
