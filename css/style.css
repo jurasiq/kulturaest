@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: #00033a;
   min-width: 320px;
@@ -19,6 +23,10 @@ body {
   font-size: 16px;
   width: 100%;
   min-height: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 header {
@@ -86,5 +94,27 @@ header {
   right: 0;
   background: url(../img/main.png) no-repeat;
   background-size: cover;
+}
+
+.st-about {
+  margin: 90px 0;
+}
+
+.st-about .plate {
+  text-align: center;
+}
+
+.st-about .plate img {
+  max-width: 100%;
+}
+
+.st-about .abouttext {
+  line-height: 18px;
+}
+
+.st-about h3 {
+  margin: 70px 0;
+  font-size: 30px;
+  line-height: 32px;
 }
 /*# sourceMappingURL=style.css.map */
