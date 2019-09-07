@@ -5,7 +5,8 @@ $(document).ready(function () {
 		nav: true,
 		dots: false,
 		loop: true,
-		margin: 36
+		margin: 36,
+		navText: ['<i class="far fa-arrow-alt-circle-left"></i>', '<i class="far fa-arrow-alt-circle-right"></i>']
 	});
 
 	$("#slider-info").owlCarousel({

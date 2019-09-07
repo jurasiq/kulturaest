@@ -25,8 +25,36 @@ body {
   min-height: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
+
 .text-center {
   text-align: center;
+}
+
+.base-btn {
+  position: relative;
+  display: inline-block;
+  padding: 9px 22px;
+  border: 3px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.base-btn:hover {
+  border: 3px solid #8DC63F;
+  text-decoration: none;
+  color: #8DC63F;
 }
 
 header {
@@ -40,54 +68,73 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: fixed;
   width: 100%;
+  padding: 12px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: rgba(0, 3, 58, 0.5);
   z-index: 10;
 }
 
 .navbar a {
-  display: block;
+  display: inline-block;
+  font-size: 24px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
 }
 
-.navbar a img {
-  width: 100%;
+.navbar .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu-btn {
-  padding: 12px 12px 12px 30px;
+.navbar .links .menu-btn {
+  margin: 0 0 0 15px;
 }
 
-.main-logo {
-  padding: 12px 12px 12px 0;
+.navbar .links .main-logo {
+  max-width: 170px;
+  margin: 0 15px;
 }
 
-.message {
-  width: 24px;
-  margin-right: 5px;
+.navbar .links .main-logo img {
+  max-width: 100%;
 }
 
-.instagram {
-  width: 24px;
-  margin-right: 5px;
+.navbar .links .fa-comment-dots, .navbar .links .fa-instagram {
+  margin-right: 15px;
 }
 
-.vkontakte {
-  width: 30px;
+.navbar .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar .nav li a {
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .hd-title-sign {
   display: block;
-  width: 435px;
+  width: 29vw;
   position: absolute;
-  left: 30px;
-  bottom: 78px;
+  left: 2.5vw;
+  bottom: 9vh;
 }
 
 .hd-image-bg {
-  width: 73.8%;
+  width: 73vw;
   height: 100%;
   position: absolute;
   top: 0;
@@ -121,6 +168,7 @@ header {
 
 .st-news {
   margin: 0 0 100px;
+  text-align: center;
 }
 
 .st-news h2 {
@@ -130,8 +178,19 @@ header {
   padding: 0;
 }
 
+.st-news .base-btn {
+  margin: 0;
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+  z-index: 10;
+}
+
 .st-news #slider-news {
-  margin: 80px 0;
+  margin: 80px 0 100px;
+}
+
+.st-news #slider-news .news-item {
+  position: relative;
 }
 
 .st-news #slider-news .news-item img {
@@ -142,5 +201,50 @@ header {
   text-align: center;
   margin-top: 10px;
   font-size: 18px;
+}
+
+.st-news #slider-info .info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.st-news #slider-info .info-item .info-desc {
+  display: inline-block;
+  max-width: 35%;
+  position: absolute;
+  padding: 30px;
+  background: rgba(0, 3, 58, 0.6);
+  background-blend-mode: multiply;
+}
+
+.st-news #slider-info .info-item .info-desc h4 {
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0 0 10px;
+}
+
+.st-news #slider-info .info-item .info-desc p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  padding: 40px 0;
+}
+
+.footer .footer-nav .bottom-menu {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
 }
 /*# sourceMappingURL=style.css.map */

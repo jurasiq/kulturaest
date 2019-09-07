@@ -17,16 +17,36 @@
 
 	<!--Custom style-->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!--Scrips-->
+	<script src="https://kit.fontawesome.com/b7fdb3574b.js"></script>
 </head>
 
 <body>
 	<header>
 		<div class="navbar">
-			<a href="#" class="menu-btn"><img src="img/menu-btn.svg" alt="Меню"></a>
-			<a href="#" class="main-logo"><img src="img/main-logo.png" alt="Культура Есть"></a>
-			<a href="#" class="message"><img src="img/message-circle.svg" alt="Связаться с нами"></a>
-			<a href="#" class="instagram"><img src="img/Instagram.svg" alt="Instagram"></a>
-			<a href="#" class="vkontakte"><img src="img/vk.svg" alt="Вконтакте"></a>
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-md-3">
+						<div class="links">
+							<a href="#" class="menu-btn"><i class="fas fa-bars"></i></a>
+							<a href="#" class="main-logo"><img src="img/main-logo.png" alt="Культура Есть"></a>
+							<a href="#" class="message"><i class="far fa-comment-dots"></i></a>
+							<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+							<a href="#" class="vkontakte"><i class="fab fa-vk"></i></a>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<ul class="nav">
+							<li><a href="#">главная</a></li>
+							<li><a href="#">адреса</a></li>
+							<li><a href="#">вакансии</a></li>
+							<li><a href="#">программа лояльности</a></li>
+							<li><a href="#">новости и акции</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="hd-image-bg"></div>
 		<div class="hd-title-sign">
@@ -240,9 +260,10 @@
 		</div>
 	</section>
 	<section class="st-news">
-		<h2 class="text-center">Новости и акции</h2>
-		<div class="owl-carousel owl-theme" id="slider-news">
 
+		<h2 class="text-center">Новости и акции</h2>
+
+		<div class="owl-carousel owl-theme" id="slider-news">
 			<div class="news-item"><a href="#"><img src="img/news/news_001.png" alt="News"></a>
 				<p class="date">10.09.19</p>
 			</div>
@@ -258,13 +279,57 @@
 			<div class="news-item"><a href="#"><img src="img/news/news_005.png" alt="News"></a>
 				<p class="date">10.09.19</p>
 			</div>
+		</div>
 
-		</div>
+		<a href="#" class="base-btn">смотреть всё</a>
+
 		<div class="owl-carousel owl-theme" id="slider-info">
-			<div class="info-item"><img src="img/info/market_kudrovo.jpg" alt="Info"></div>
-			<div class="info-item"><img src="img/info/kudrovo_polki.jpg" alt="Info"></div>
+			<div class="info-item">
+				<img src="img/info/market_kudrovo.jpg" alt="Info">
+				<div class="info-desc">
+					<h4>Знания</h4>
+					<p>Мы знаем, чем полба отличается от обычной пшеницы и готовы рассказать об этом Вам! <br>В экомаркетах
+						работают
+						консультанты, всегда готовые помочь разобраться в нашем ассортименте.</p>
+				</div>
+			</div>
+			<div class="info-item">
+				<img src="img/info/kudrovo_polki.jpg" alt="Info">
+				<div class="info-desc">
+					<h4>Знания</h4>
+					<p>Мы знаем, чем полба отличается от обычной пшеницы и готовы рассказать об этом Вам! <br>В экомаркетах
+						работают
+						консультанты, всегда готовые помочь разобраться в нашем ассортименте.</p>
+				</div>
+			</div>
 		</div>
+
 	</section>
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="vk-group"></div>
+				</div>
+				<div class="col-md-7">
+					<div class="footer-nav">
+						<ul class="bottom-menu">
+							<li><a href="#">главная</a></li>
+							<li><a href="#">адреса</a></li>
+							<li><a href="#">вакансии</a></li>
+							<li><a href="#">программа лояльности</a></li>
+							<li><a href="#">новости и акции</a></li>
+						</ul>
+						<img src="img/logo_ecobio.svg" alt="Eco Bio">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="arrow-up"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 
 <!--Vendor scripts-->

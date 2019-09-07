@@ -1,17 +1,47 @@
 .st-news
 	margin: 0 0 100px
+	text-align: center
 	h2
 		font-size: 48px
 		line-height: 48px
 		margin: 0 0 40px
 		padding: 0
+	
+	.base-btn
+		margin: 0
+		transform: translateY(-150px)
+		z-index: 10
 
 	#slider-news
-		margin: 80px 0
+		margin: 80px 0 100px
 		.news-item
+			position: relative
 			img
 				border: 7px solid #fff
 			p
 				text-align: center
 				margin-top: 10px
 				font-size: 18px
+
+	#slider-info
+		.info-item
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+			.info-desc
+				display: inline-block
+				max-width: 35%
+				position: absolute
+				padding: 30px
+				background: rgba(0, 3, 58, 0.6)
+				background-blend-mode: multiply
+				h4
+					font-size: 30px
+					line-height: 30px
+					margin: 0 0 10px
+				p
+					margin: 0
+					font-size: 18px
+					line-height: 18px
+					text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5)
