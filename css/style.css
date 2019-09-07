@@ -129,4 +129,18 @@ header {
   margin: 0 0 40px;
   padding: 0;
 }
+
+.st-news #slider-news {
+  margin: 80px 0;
+}
+
+.st-news #slider-news .news-item img {
+  border: 7px solid #fff;
+}
+
+.st-news #slider-news .news-item p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
 /*# sourceMappingURL=style.css.map */
