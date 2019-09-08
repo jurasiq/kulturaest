@@ -23,6 +23,9 @@
 </head>
 
 <body>
+
+	<div class="preloader"><div class="pulse"></div></div>
+
 	<header>
 		<div class="navbar">
 			<div class="container-fluid">
@@ -348,7 +351,14 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-3">
-					<div class="vk-group"></div>
+					<div class="vk-group">
+						<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+						<!-- VK Widget -->
+						<div id="vk_groups"></div>
+						<script type="text/javascript">
+						VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1, width: "auto", height: "200", color2: '8DC63F', color3: '8DC63F'}, 182818211);
+						</script>
+					</div>
 				</div>
 				<div class="col-md-7">
 					<div class="footer-nav">
@@ -359,11 +369,21 @@
 							<li><a href="#">программа лояльности</a></li>
 							<li><a href="#">новости и акции</a></li>
 						</ul>
-						<img src="img/logo_ecobio.svg" alt="Eco Bio">
+						<div class="logo-footer">
+							<img src="img/logo_ecobio.svg" alt="Eco Bio">
+							<span>© 2019. Культура есть</span>
+							<a href="#">Политика конфиденциальности</a>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-2">
-					<div class="arrow-up"></div>
+					<div class="arrow-up">
+						<i class="fas fa-arrow-up top" title="Вверх"></i>
+						<div class="logo-kalachi">
+							<img src="img/logo_kalachi.svg" alt="KalachiBrand">
+							<span>сделано в «kalachi brand»</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

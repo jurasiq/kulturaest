@@ -23,4 +23,15 @@ $(document).ready(function () {
 		loop: true,
 		autoplay: true
 	});
+
+	$('.top').click(function () {
+		$('html, body').stop().animate({
+			scrollTop: 0
+		}, 'slow', 'swing');
+	});
+
+});
+
+$(window).on('load', function () {
+	$('.preloader').delay(1000).fadeOut('slow');
 });
