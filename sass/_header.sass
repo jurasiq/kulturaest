@@ -5,13 +5,14 @@ header
 	padding: 0
 
 .navbar
-	display: flex
 	position: fixed
 	width: 100%
 	padding: 12px 0
 	align-items: center
-	background: rgba(0, 3, 58, 0.5)
 	z-index: 10
+	transition: all 0.3s
+	&_active
+		background: rgba(0, 3, 58, 0.5)
 	a
 		display: inline-block
 		font-size: 24px
@@ -21,7 +22,7 @@ header
 		display: flex
 		align-items: center
 		.menu-btn
-			margin: 0 0 0 15px
+			margin-left: 15px
 		.main-logo
 			max-width: 170px
 			margin: 0 15px
@@ -35,6 +36,10 @@ header
 		margin: 0
 		list-style: none
 		justify-content: space-around
+		opacity: 0
+		transition: all 0.3s
+		&_active
+			opacity: 1
 		
 		li
 			a
