@@ -276,6 +276,7 @@ header {
 
 .navbar .links .menu-btn {
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .navbar .links .main-logo {
@@ -292,6 +293,7 @@ header {
 }
 
 .navbar .nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
