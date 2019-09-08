@@ -17,7 +17,7 @@
 	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 10px;
+	margin-top: 20px;
 	max-width: 70%;
 	font-size: 30px;
 }
@@ -65,5 +65,5 @@
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
 	background: #8DC63F;
-	
+
 }
