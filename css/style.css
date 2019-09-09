@@ -292,7 +292,11 @@ header {
   max-width: 100%;
 }
 
-.navbar .links .fa-comment-dots, .navbar .links .fa-instagram {
+.navbar .links .message svg {
+  fill: #fff;
+}
+
+.navbar .links .fa-instagram {
   margin-right: 15px;
 }
 
