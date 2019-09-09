@@ -230,10 +230,10 @@ a:hover {
 }
 
 .sec-btn:hover {
-  border: 3px solid #00033A;
+  border: 3px solid #8DC63F;
   text-decoration: none;
-  background: #fff;
-  color: #00033A;
+  background-color: #fff;
+  color: #8DC63F;
 }
 
 header {
@@ -329,7 +329,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  background: url(../img/main.png) no-repeat;
+  background: url(../img/header/main_1.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -347,6 +347,7 @@ header {
 }
 
 .st-about .abouttext {
+  font-size: 18px;
   line-height: 18px;
 }
 
@@ -382,7 +383,6 @@ header {
 .st-news #slider-news .news-item .news-img {
   position: relative;
   overflow: hidden;
-  border: 7px solid #fff;
   margin-bottom: 10px;
 }
 
@@ -404,6 +404,7 @@ header {
 .st-news #slider-news .news-item .news-img .news-descr span {
   display: inline-block;
   font-size: 24px;
+  line-height: 24px;
   font-weight: bold;
   margin-top: 70px;
   margin-bottom: 10px;
@@ -412,7 +413,7 @@ header {
 .st-news #slider-news .news-item .news-img .news-descr .sec-btn {
   position: absolute;
   left: 20px;
-  bottom: 15px;
+  bottom: 26px;
 }
 
 .st-news #slider-news .news-item .date {
@@ -439,6 +440,7 @@ header {
 }
 
 .st-news #slider-info .info-item .info-desc {
+  text-align: left;
   display: inline-block;
   max-width: 35%;
   position: absolute;
@@ -499,7 +501,8 @@ header {
   height: 100%;
 }
 
-.footer .arrow-up .fa-arrow-up {
+.footer .arrow-up-icon svg {
+  fill: #fff;
   position: absolute;
   top: 0;
   right: 15px;
@@ -507,8 +510,8 @@ header {
   cursor: pointer;
 }
 
-.footer .arrow-up .fa-arrow-up:hover {
-  color: #8DC63F;
+.footer .arrow-up-icon svg:hover {
+  fill: #8DC63F;
 }
 
 .footer .arrow-up .logo-kalachi {

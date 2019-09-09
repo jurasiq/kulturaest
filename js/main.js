@@ -20,7 +20,9 @@ $(document).ready(function () {
 		items: 1,
 		dots: true,
 		loop: true,
-		autoplay: true
+		autoplay: true,
+		autoplayTimeout: 8000,
+		animateOut: 'fadeOut'
 	});
 
 	$('.top').click(function () {
