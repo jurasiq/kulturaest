@@ -208,6 +208,8 @@ a:hover {
   line-height: 18px;
   text-decoration: none;
   border-radius: 10px;
+  -webkit-transition: all .25s;
+  transition: all .25s;
 }
 
 .base-btn:hover {
@@ -227,6 +229,8 @@ a:hover {
   line-height: 18px;
   text-decoration: none;
   border-radius: 10px;
+  -webkit-transition: all .25s;
+  transition: all .25s;
 }
 
 .sec-btn:hover {
@@ -501,13 +505,20 @@ header {
   height: 100%;
 }
 
-.footer .arrow-up-icon svg {
-  fill: #fff;
+.footer .arrow-up-icon {
   position: absolute;
+  width: 30px;
+  height: 30px;
   top: 0;
   right: 15px;
-  font-size: 36px;
+}
+
+.footer .arrow-up-icon svg {
+  fill: #fff;
+  position: relative;
   cursor: pointer;
+  -webkit-transition: all .25s;
+  transition: all .25s;
 }
 
 .footer .arrow-up-icon svg:hover {
