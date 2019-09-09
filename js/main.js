@@ -22,10 +22,11 @@ $(document).ready(function () {
 		loop: true,
 		autoplay: true,
 		autoplayTimeout: 8000,
+		smartSpeed: 2000,
 		animateOut: 'fadeOut'
 	});
 
-	$('.top').click(function () {
+	$('.arrow-up-icon').click(function () {
 		$('html, body').stop().animate({
 			scrollTop: 0
 		}, 'slow', 'swing');

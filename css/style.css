@@ -145,11 +145,11 @@ a:hover {
 .menu-btn span {
   position: absolute;
   top: 50%;
-  margin-top: -1.5px;
+  margin-top: -1px;
   left: 50%;
   margin-left: -10px;
   width: 22px;
-  height: 3px;
+  height: 2px;
   background-color: #fff;
   border-radius: 1px;
 }
@@ -157,11 +157,11 @@ a:hover {
 .menu-btn span::before, .menu-btn span::after {
   position: absolute;
   top: 50%;
-  margin-top: -1.5px;
+  margin-top: -1px;
   left: 50%;
   margin-left: -11px;
   width: 22px;
-  height: 3px;
+  height: 2px;
   background-color: #fff;
   border-radius: 1px;
 }
@@ -265,8 +265,6 @@ header {
 
 .navbar a {
   display: inline-block;
-  font-size: 24px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
 }
 
 .navbar .links {
@@ -279,25 +277,40 @@ header {
 }
 
 .navbar .links .menu-btn {
-  margin-left: 15px;
+  display: block;
+  margin: 0 15px;
   cursor: pointer;
 }
 
 .navbar .links .main-logo {
-  max-width: 170px;
-  margin: 0 15px;
+  display: block;
+  margin-right: 15px;
+  padding: 0;
 }
 
 .navbar .links .main-logo img {
-  max-width: 100%;
+  width: 168px;
 }
 
-.navbar .links .message svg {
-  fill: #fff;
+.navbar .links .message, .navbar .links .instagram, .navbar .links .vkontakte {
+  display: block;
 }
 
-.navbar .links .fa-instagram {
+.navbar .links .message .fa-comment-dots, .navbar .links .instagram .fa-comment-dots, .navbar .links .vkontakte .fa-comment-dots {
+  font-size: 22px;
   margin-right: 15px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.navbar .links .message .fa-instagram, .navbar .links .instagram .fa-instagram, .navbar .links .vkontakte .fa-instagram {
+  font-size: 22px;
+  margin-right: 15px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.navbar .links .message .fa-vk, .navbar .links .instagram .fa-vk, .navbar .links .vkontakte .fa-vk {
+  font-size: 22px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
 }
 
 .navbar .nav {
@@ -513,7 +526,7 @@ header {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 0;
+  top: 10px;
   right: 15px;
 }
 
