@@ -4,6 +4,9 @@ $(document).ready(function () {
 		$(this).toggleClass('menu-btn_active');
 		$('.nav').toggleClass('nav_active');
 		$('.navbar').toggleClass('navbar_active');
+		// change logo size on menu click
+		if ($(this).hasClass('menu-btn_active')) { show_big_logo(); } 
+		else if ($(document).scrollTop() > 0) { show_small_logo(); }
 	});
 
 	$("#slider-news").owlCarousel({
@@ -36,15 +39,19 @@ $(document).ready(function () {
 
 
 // change logo after scroll
+function show_small_logo() {
+	$('.main-logo img').attr('src', 'img/small-logo.png');
+	$('.main-logo img').addClass('small-logo-width');
+}
+
+function show_big_logo() {
+	$('.main-logo img').attr('src', 'img/main-logo.png');
+    $('.main-logo img').removeClass('small-logo-width');
+}
+
 function check_scroll() {
-	if ($(document).scrollTop() > 0) 
-	{
-		$('.main-logo img').attr('src', 'img/small-logo.png');
-		$('.main-logo img').addClass('small-logo-width');
-    } else {
-    	$('.main-logo img').attr('src', 'img/main-logo.png');
-    	$('.main-logo img').removeClass('small-logo-width');
-    }
+	if ($(document).scrollTop() > 0) { show_small_logo(); } 
+	else { show_big_logo(); }
 }
 
 
