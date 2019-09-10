@@ -145,11 +145,11 @@ a:hover {
 .menu-btn span {
   position: absolute;
   top: 50%;
-  margin-top: -1px;
+  margin-top: -1.5px;
   left: 50%;
   margin-left: -10px;
-  width: 22px;
-  height: 2px;
+  width: 20px;
+  height: 3px;
   background-color: #fff;
   border-radius: 1px;
 }
@@ -157,11 +157,11 @@ a:hover {
 .menu-btn span::before, .menu-btn span::after {
   position: absolute;
   top: 50%;
-  margin-top: -1px;
+  margin-top: -1.5px;
   left: 50%;
-  margin-left: -11px;
-  width: 22px;
-  height: 2px;
+  margin-left: -10px;
+  width: 20px;
+  height: 3px;
   background-color: #fff;
   border-radius: 1px;
 }
@@ -174,13 +174,13 @@ a:hover {
 }
 
 .menu-btn span::before {
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
 .menu-btn span::after {
-  -webkit-transform: translateY(7px);
-          transform: translateY(7px);
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
 }
 
 .menu-btn_active span {
@@ -201,9 +201,9 @@ a:hover {
   position: relative;
   display: inline-block;
   padding: 9px 22px;
-  border: 3px solid #fff;
+  border: 3.7px solid #fff;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
   line-height: 18px;
   text-decoration: none;
@@ -213,7 +213,7 @@ a:hover {
 }
 
 .base-btn:hover {
-  border: 3px solid #8DC63F;
+  border: 3.7px solid #8DC63F;
   text-decoration: none;
   color: #8DC63F;
 }
@@ -222,9 +222,9 @@ a:hover {
   position: relative;
   display: inline-block;
   padding: 6px 16px;
-  border: 3px solid #00033A;
+  border: 3.7px solid #00033A;
   color: #00033A;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
   line-height: 18px;
   text-decoration: none;
@@ -234,9 +234,8 @@ a:hover {
 }
 
 .sec-btn:hover {
-  border: 3px solid #8DC63F;
+  border: 3.7px solid #8DC63F;
   text-decoration: none;
-  background-color: #fff;
   color: #8DC63F;
 }
 
@@ -384,9 +383,9 @@ header {
 }
 
 .st-news h2 {
-  font-size: 48px;
-  line-height: 48px;
-  margin: 0 0 40px;
+  font-size: 3rem;
+  line-height: 1.4;
+  margin: 0;
   padding: 0;
 }
 
@@ -398,7 +397,7 @@ header {
 }
 
 .st-news #slider-news {
-  margin: 80px 0 100px;
+  margin: 50px 0 100px;
 }
 
 .st-news #slider-news .news-item .news-img {
@@ -423,18 +422,22 @@ header {
 }
 
 .st-news #slider-news .news-item .news-img .news-descr span {
-  display: inline-block;
-  font-size: 24px;
-  line-height: 24px;
+  display: block;
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 28%;
+  font-size: 1.6rem;
+  line-height: 1.1;
   font-weight: bold;
-  margin-top: 70px;
+  margin-top: 85px;
   margin-bottom: 10px;
 }
 
 .st-news #slider-news .news-item .news-img .news-descr .sec-btn {
   position: absolute;
-  left: 20px;
-  bottom: 26px;
+  left: 6%;
+  bottom: 8%;
 }
 
 .st-news #slider-news .news-item .date {
