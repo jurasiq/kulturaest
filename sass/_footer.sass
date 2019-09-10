@@ -7,6 +7,10 @@
 			margin: 0 0 20px
 			padding: 0
 			list-style: none
+			li a:hover
+				color: $active-color
+				text-decoration: none
+				transition: all .3s
 		.logo-footer
 			position: absolute
 			bottom: 0
@@ -30,9 +34,9 @@
 				fill: #fff
 				position: relative
 				cursor: pointer
-				transition: all .25s
+				transition: all .3s
 				&:hover
-					fill: #8DC63F
+					fill: $active-color
 		.logo-kalachi
 			text-align: right
 			position: absolute

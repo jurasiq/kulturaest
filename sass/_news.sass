@@ -15,7 +15,6 @@
 	#slider-news
 		margin: 50px 0 100px
 		.news-item
-			
 			.news-img
 				position: relative
 				overflow: hidden
@@ -52,9 +51,12 @@
 				text-align: center
 				margin-top: 15px
 				font-size: 18px
+				transition: all .3s
 
 		.news-item:hover .news-descr
 			opacity: 1
+		.news-item:hover .date
+			color: $active-color
 
 	#slider-info
 		.info-item
