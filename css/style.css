@@ -594,3 +594,7 @@ header {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.small-logo-width {
+	width: 22px !important;
+}

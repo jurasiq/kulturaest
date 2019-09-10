@@ -34,6 +34,29 @@ $(document).ready(function () {
 
 });
 
+
+// change logo after scroll
+function check_scroll() {
+	if ($(document).scrollTop() > 0) 
+	{
+		$('.main-logo img').attr('src', 'img/small-logo.png');
+		$('.main-logo img').addClass('small-logo-width');
+    } else {
+    	$('.main-logo img').attr('src', 'img/main-logo.png');
+    	$('.main-logo img').removeClass('small-logo-width');
+    }
+}
+
+
+$(window).on("scroll touchmove", function() 
+{
+	check_scroll();  
+});
+
+
 $(window).on('load', function () {
+	check_scroll();
 	$('.preloader').delay(1000).fadeOut('slow');
 });
+
+
