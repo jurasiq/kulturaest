@@ -46,7 +46,7 @@ function show_small_logo() {
 
 function show_big_logo() {
 	$('.main-logo img').attr('src', 'img/main-logo.png');
-    $('.main-logo img').removeClass('small-logo-width');
+	$('.main-logo img').removeClass('small-logo-width');
 }
 
 function check_scroll() {
