@@ -4,7 +4,19 @@ $(document).ready(function () {
 		$(this).toggleClass('menu-btn_active');
 		$('.nav').toggleClass('nav_active');
 		$('.navbar').toggleClass('navbar_active');
+		// change logo size on menu click
+		if ($(this).hasClass('menu-btn_active')) { show_big_logo(); } 
+		else if ($(document).scrollTop() > 0) { show_small_logo(); }
 	});
+
+	$('#slider-header').slideshow({
+        randomize: false,      // Randomize the play order of the slides.
+        slideDuration: 6000,  // Duration of each induvidual slide.
+        fadeDuration: 1000,    // Duration of the fading transition. Should be shorter than slideDuration.
+        animate: true,        // Turn css animations on or off.
+        pauseOnTabBlur: true, // Pause the slideshow when the tab is out of focus. This prevents glitches with setTimeout().
+        enableLog: false      // Enable log messages to the console. Useful for debugging.
+    });
 
 	$("#slider-news").owlCarousel({
 		center: true,
@@ -34,6 +46,33 @@ $(document).ready(function () {
 
 });
 
+
+// change logo after scroll
+function show_small_logo() {
+	$('.main-logo img').attr('src', 'img/small-logo.png');
+	$('.main-logo img').addClass('small-logo-width');
+}
+
+function show_big_logo() {
+	$('.main-logo img').attr('src', 'img/main-logo.png');
+	$('.main-logo img').removeClass('small-logo-width');
+}
+
+function check_scroll() {
+	if ($(document).scrollTop() > 0 && !$('.menu-btn.menu-btn_active').length) { show_small_logo(); } 
+	else { show_big_logo(); }
+}
+
+
+$(window).on("scroll touchmove", function() 
+{
+	check_scroll();  
+});
+
+
 $(window).on('load', function () {
+	check_scroll();
 	$('.preloader').delay(1000).fadeOut('slow');
 });
+
+
