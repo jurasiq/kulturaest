@@ -597,5 +597,5 @@ header {
 
 /* fix _header.sass style for small logo width */
 .small-logo-width {
-	width: 22px !important;
+	width: 32px !important;
 }
