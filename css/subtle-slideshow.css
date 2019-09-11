@@ -162,9 +162,7 @@
   bottom: 0;
 }
 
-#slideshow .slide,
-#slideshow span,
-#slideshow .static-content {
+#slideshow .slide, #slideshow span, #slideshow .static-content {
   display: block;
   position: absolute;
   top: 0;
@@ -178,14 +176,12 @@
   background-position: center;
 }
 
-#slideshow .slide span.animate.right,
-#slideshow .slide span.animate.left {
+#slideshow .slide span.animate.right, #slideshow .slide span.animate.left {
   left: calc((-4vw + -4vh + -4%)/3);
   right: calc((-4vw + -4vh + -4%)/3);
 }
 
-#slideshow .slide span.animate.up,
-#slideshow .slide span.animate.down {
+#slideshow .slide span.animate.up, #slideshow .slide span.animate.down {
   top: calc((-4vw + -4vh + -4%)/3);
   bottom: calc((-4vw + -4vh + -4%)/3);
 }
