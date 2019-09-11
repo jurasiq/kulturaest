@@ -59,7 +59,7 @@ function show_big_logo() {
 }
 
 function check_scroll() {
-	if ($(document).scrollTop() > 0) { show_small_logo(); } 
+	if ($(document).scrollTop() > 0 && !$('.menu-btn.menu-btn_active').length) { show_small_logo(); } 
 	else { show_big_logo(); }
 }
 
