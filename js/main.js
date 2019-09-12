@@ -3,7 +3,10 @@ $(document).ready(function () {
 	$('.menu-btn').on('click', function () {
 		$(this).toggleClass('menu-btn_active');
 		$('.nav').toggleClass('nav_active');
-		$('.navbar').toggleClass('navbar_active');
+		if ($(document).scrollTop() == 0) {
+			$('.navbar').toggleClass('navbar_active');
+		}
+		
 		// change logo size on menu click
 		if ($(this).hasClass('menu-btn_active')) {
 			show_big_logo();
@@ -62,8 +65,10 @@ function show_big_logo() {
 function check_scroll() {
 	if ($(document).scrollTop() > 0 && !$('.menu-btn.menu-btn_active').length) {
 		show_small_logo();
+		$('.navbar').addClass('navbar_active');
 	} else {
 		show_big_logo();
+		if (!$('.menu-btn.menu-btn_active').length) $('.navbar').removeClass('navbar_active');
 	}
 }
 
