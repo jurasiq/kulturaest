@@ -3,7 +3,10 @@ $(document).ready(function () {
 	$('.menu-btn').on('click', function () {
 		$(this).toggleClass('menu-btn_active');
 		$('.nav').toggleClass('nav_active');
-		$('.navbar').toggleClass('navbar_active');
+		if ($(document).scrollTop() == 0) {
+			$('.navbar').toggleClass('navbar_active');
+		}
+		
 		// change logo size on menu click
 		if ($(this).hasClass('menu-btn_active')) {
 			show_big_logo();
@@ -53,19 +56,19 @@ $(document).ready(function () {
 // change logo after scroll
 function show_small_logo() {
 	$('.main-logo img').addClass('small-logo-width');
-	$('.main-logo img').attr('src', 'img/small-logo.png');
 }
 
 function show_big_logo() {
-	$('.main-logo img').attr('src', 'img/main-logo.png');
 	$('.main-logo img').removeClass('small-logo-width');
 }
 
 function check_scroll() {
 	if ($(document).scrollTop() > 0 && !$('.menu-btn.menu-btn_active').length) {
 		show_small_logo();
+		$('.navbar').addClass('navbar_active');
 	} else {
 		show_big_logo();
+		if (!$('.menu-btn.menu-btn_active').length) $('.navbar').removeClass('navbar_active');
 	}
 }
 
