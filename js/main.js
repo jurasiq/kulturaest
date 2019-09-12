@@ -52,8 +52,8 @@ $(document).ready(function () {
 
 // change logo after scroll
 function show_small_logo() {
-	$('.main-logo img').attr('src', 'img/small-logo.png');
 	$('.main-logo img').addClass('small-logo-width');
+	$('.main-logo img').attr('src', 'img/small-logo.png');
 }
 
 function show_big_logo() {

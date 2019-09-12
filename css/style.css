@@ -42,7 +42,7 @@ a:hover {
   display: none;
 }
 
-@use postcss-cssnext {}:root {
+:root {
   --min-size: 2px;
   --max-size: 20px;
 }
