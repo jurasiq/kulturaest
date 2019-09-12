@@ -8,6 +8,14 @@ body
 	font-family: 'Houschka Pro', sans-serif
 	width: 100%
 	min-height: 100%
+	&::after
+		/* style for preloading images */
+		position: absolute
+		width: 0
+		height: 0
+		overflow: hidden
+		z-index: -1
+		content: url(../img/main-logo.png) url(../img/small-logo.png)
 
 a
 	text-decoration: none
