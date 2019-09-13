@@ -367,6 +367,7 @@ header {
 }
 
 .hd-title-sign img {
+  position: relative;
   min-width: 100%;
 }
 

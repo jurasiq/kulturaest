@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="libs/owlcarousel2/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="libs/owlcarousel2/assets/owl.theme.default.min.css" />
 	<link rel="stylesheet" href="libs/subtle-slideshow-ken-burns-effect/subtle-slideshow.css" />
+	<link rel="stylesheet" href="libs/animate-css/animate.min.css">
 
 	<!--Custom style-->
 	<link rel="stylesheet" href="css/style.css" />
@@ -99,40 +100,40 @@
 		<div class="container-fluid">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-md-3">
-					<div class="plate">
+					<div class="plate wow fadeInLeft" data-wow-offset="300" data-wow-duration=".5s">
 						<img src="img/img_plate.png" alt="КультураЕсть" />
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="abouttext">
+					<div class="abouttext wow fadeInRight" data-wow-offset="300" data-wow-duration=".5s">
 						«Культура есть» – сеть экомаркетов с большим выбором полезных
 						продуктов и натуральной косметики. Мы внимательно подходим к тому,
 						что стоит на полках нашего экомаркета!
 					</div>
 				</div>
 			</div>
-			<h3 class="text-center">
+			<h3 class="text-center wow fadeInUp" data-wow-offset="300" data-wow-duration=".5s">
 				Ассортимент для экомаркетов «Культура есть»<br />всегда подбиратеся по
 				четырём критериям:
 			</h3>
 			<div class="row">
 				<div class="col-md-3">
-					<div class="advantage-item text-center">
+					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".2s" data-wow-duration=".5s">
 						<img src="img/polezno.svg" alt="Полезно" />
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="advantage-item text-center">
+					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".4s" data-wow-duration=".5s">
 						<img src="img/ecologichno.svg" alt="Экологично" />
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="advantage-item text-center">
+					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".6s" data-wow-duration=".5s">
 						<img src="img/naturalno.svg" alt="" />
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="advantage-item text-center">
+					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".8s" data-wow-duration=".5s">
 						<img src="img/pravilno.svg" alt="" />
 					</div>
 				</div>
@@ -140,7 +141,7 @@
 		</div>
 	</section>
 	<section class="st-news">
-		<h2 class="text-center">Новости и акции</h2>
+		<h2 class="text-center wow fadeInUp" data-wow-offset="300" data-wow-duration=".5s">Новости и акции</h2>
 
 		<div class="owl-carousel owl-theme" id="slider-news">
 			<div class="news-item">
@@ -362,6 +363,10 @@
 <script src="libs/jquery/jquery-3.4.1.min.js"></script>
 <script src="libs/owlcarousel2/owl.carousel.min.js"></script>
 <script src="libs/subtle-slideshow-ken-burns-effect/jquery.subtle-slideshow.js"></script>
+<script src="libs/animate-css/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
 
 <!--User scripts-->
 <script src="js/main.js"></script>
