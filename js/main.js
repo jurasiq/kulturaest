@@ -6,7 +6,7 @@ $(document).ready(function () {
 		if ($(document).scrollTop() == 0) {
 			$('.navbar').toggleClass('navbar_active');
 		}
-		
+
 		// change logo size on menu click
 		if ($(this).hasClass('menu-btn_active')) {
 			show_big_logo();
@@ -42,6 +42,25 @@ $(document).ready(function () {
 		autoplayTimeout: 8000,
 		smartSpeed: 2000,
 		animateOut: 'fadeOut'
+	});
+
+	// открыть по кнопке
+	$('.message').click(function () {
+		$('.overlay').fadeIn();
+		$('.overlay').addClass('disabled');
+	});
+
+	// закрыть на крестик
+	$('.close-popup').click(function () {
+		$('.overlay').fadeOut();
+	});
+
+	// закрыть по клику вне окна
+	$(document).mouseup(function (e) {
+		var popup = $('.popup');
+		if (e.target != popup[0] && popup.has(e.target).length === 0) {
+			$('.overlay').fadeOut();
+		}
 	});
 
 	$('.arrow-up-icon').click(function () {
