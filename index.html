@@ -118,22 +118,26 @@
 			</h3>
 			<div class="row">
 				<div class="col-md-3">
-					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".2s" data-wow-duration=".5s">
+					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".2s"
+						data-wow-duration=".5s">
 						<img src="img/polezno.svg" alt="Полезно" />
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".4s" data-wow-duration=".5s">
+					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".4s"
+						data-wow-duration=".5s">
 						<img src="img/ecologichno.svg" alt="Экологично" />
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".6s" data-wow-duration=".5s">
+					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".6s"
+						data-wow-duration=".5s">
 						<img src="img/naturalno.svg" alt="" />
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".8s" data-wow-duration=".5s">
+					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".8s"
+						data-wow-duration=".5s">
 						<img src="img/pravilno.svg" alt="" />
 					</div>
 				</div>
@@ -315,11 +319,11 @@
 		<div class="popup">
 			<form action="#" method="post" id="form1" class="callback ajax_form" enctype="multipart/form-data">
 				<h2 class="text-center">Написать нам</h2>
-				<input class="hidden" type="text" name="user" placeholder="">
-				<input class="hidden" type="text" name="username" placeholder="">
-				<div class="inputs">
-					<div class="left">
-						<select name="Тип обращения" id="type">
+				<div class="row">
+					<div class="col-md-5">
+						<input class="hidden" type="text" name="user" placeholder="">
+						<input class="hidden" type="text" name="username" placeholder="">
+						<select name="Тип обращения" id="type" class="select">
 							<option value="Выберите тип обращения">Выберите тип обращения</option>
 							<option value="Оставить отзыв">Оставить отзыв</option>
 							<option value="Узнать о товаре">Узнать о товаре</option>
@@ -330,29 +334,29 @@
 							<option value="Прессе">Прессе</option>
 							<option value="Партнерство">Партнерство</option>
 						</select>
-						<select name="Адресат" id="adresat">
+						<select name="Адресат" id="adresat" class="select">
 							<option value="Выберите экомаркет">Выберите экомаркет</option>
 							<option value="Оставить отзыв">Вся сеть</option>
 							<option value="Оставить отзыв">Коломяжский пр. д.28</option>
 							<option value="Оставить отзыв">Кудрово. Европейский пр. д.3</option>
 						</select>
-						<input type="text" name="name" placeholder="Имя*">
-						<input type="tel" name="phone" placeholder="Телефон*">
-						<input type="email" name="email" placeholder="E-mail*">
+						<input type="text" name="name" placeholder="Имя*" class="input">
+						<input type="tel" name="phone" placeholder="Телефон*" class="input">
+						<input type="email" name="email" placeholder="E-mail*" class="input">
 						<div class="file">
 							<img src="img/attach.svg" alt="Прикрепить файлы">
 							<span>.doc, .pdf, .ppt, .docx, .pptx, .xls,<br>.jpg, .png до 10Мб</span>
 						</div>
-						<input type="file" id="upload" class="hide">
-						<label for="upload" class="sec-btn">прикрепить</label>
+						<input type="file" id="upload" class="hide inputfile" data-multiple-caption="{count} files selected" accept="application/msword,application/pdf,application/mspowerpoint,application/excel,image/png,image/jpeg" />
+						<label for="upload" class="sec-btn"><span>прикрепить</span></label>
 					</div>
-					<div class="right">
-						<textarea type="text" name="text" placeholder="Послание"></textarea>
+					<div class="col-md-6">
+						<textarea class="textarea" type="text" name="text" placeholder="Послание"></textarea>
 						<button type="submit" class="sec-btn">отправить</button>
 					</div>
 				</div>
 			</form>
-			<div class="close-popup"><i class="fas fa-times"></i></div>
+			<div class="close-popup"><span></span></div>
 		</div>
 
 	</div>

@@ -256,6 +256,7 @@ a:hover {
   line-height: 18px;
   text-decoration: none;
   border-radius: 10px;
+  cursor: pointer;
   -webkit-transition: all .25s;
   transition: all .25s;
 }
@@ -645,16 +646,35 @@ header {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 24px;
-  height: 24px;
-  text-align: center;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-.overlay .popup .close-popup .fa-times {
-  font-size: 24px;
+.overlay .popup .close-popup::before, .overlay .popup .close-popup::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 3px;
+  background-color: #00033a;
+  border-radius: 1px;
+}
+
+.overlay .popup .close-popup:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.overlay .popup .close-popup:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .overlay .popup .close-popup:hover {
@@ -667,24 +687,7 @@ header {
   position: relative;
 }
 
-.overlay .popup .callback .inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.overlay .popup .callback .inputs .left {
-  width: 240px;
-}
-
-.overlay .popup .callback .inputs .left select, .overlay .popup .callback .inputs .left input {
+.overlay .popup .callback .select, .overlay .popup .callback .input {
   display: block;
   width: 100%;
   height: 32px;
@@ -695,22 +698,30 @@ header {
   margin-bottom: 10px;
 }
 
-.overlay .popup .callback .inputs .left .file img {
+.overlay .popup .callback .file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 15px 0 8px;
+}
+
+.overlay .popup .callback .file img {
   display: inline-block;
-  width: 12px;
-  height: 20px;
-  margin: 0 10px 12px 0;
+  width: 13.2px;
+  height: 22px;
+  margin-right: 10px;
 }
 
-.overlay .popup .callback .inputs .left .file span {
+.overlay .popup .callback .file span {
   display: inline-block;
 }
 
-.overlay .popup .callback .inputs .right {
-  width: 400px;
-}
-
-.overlay .popup .callback .inputs .right textarea {
+.overlay .popup .callback .textarea {
   display: block;
   border: none;
   border-bottom: 1px solid #00033a;
@@ -719,18 +730,13 @@ header {
   height: 200px;
 }
 
-.overlay .popup .callback .inputs .right button {
-  margin-top: 65px;
-}
-
-.overlay .popup .callback .file {
-  font-size: 12px;
-  line-height: 12px;
-  margin: 15px 0;
+.overlay .popup .callback button {
+  margin-top: 46px;
 }
 
 .sec-btn {
   background-color: #fff;
+  margin: 0;
 }
 
 .send {
