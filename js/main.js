@@ -109,7 +109,8 @@ $(window).on('load', function () {
 	$('.inputfile').each(function () {
 		var $input = $(this),
 			$label = $input.next('label'),
-			labelVal = $label.html();
+			labelVal = $label.html(),
+			$labelName = $input.prev('div.file').find('span');
 
 		$input.on('change', function (e) {
 			var fileName = '';
@@ -120,9 +121,9 @@ $(window).on('load', function () {
 				fileName = e.target.value.split('\\').pop();
 
 			if (fileName)
-				$label.find('span').html(fileName);
+				$labelName.html(fileName);
 			else
-				$label.html(labelVal);
+				$labelName.html(labelVal);
 		});
 
 		// Firefox bug fix
