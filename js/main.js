@@ -74,11 +74,11 @@ $(document).ready(function () {
 
 // change logo after scroll
 function show_small_logo() {
-	$('.main-logo img').addClass('small-logo-width');
+	$('.main-logo').addClass('small-logo-width');
 }
 
 function show_big_logo() {
-	$('.main-logo img').removeClass('small-logo-width');
+	$('.main-logo').removeClass('small-logo-width');
 }
 
 function check_scroll() {
