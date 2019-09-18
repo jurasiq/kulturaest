@@ -26,12 +26,20 @@ $(document).ready(function () {
 
 	$("#slider-news").owlCarousel({
 		center: true,
-		items: 4,
-		nav: true,
 		dots: false,
 		loop: true,
 		margin: 36,
-		navText: ['<i class="far fa-arrow-alt-circle-left"></i>', '<i class="far fa-arrow-alt-circle-right"></i>']
+		navText: ['<i class="far fa-arrow-alt-circle-left"></i>', '<i class="far fa-arrow-alt-circle-right"></i>'],
+		responsive: {
+			0: {
+				items: 1,
+				nav: true
+			},
+			992: {
+				items: 4,
+				nav: true,
+			},
+		}
 	});
 
 	$("#slider-info").owlCarousel({
