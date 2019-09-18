@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 	$('#slider-header').slideshow({
 		randomize: false, // Randomize the play order of the slides.
-		slideDuration: 6000, // Duration of each induvidual slide.
+		slideDuration: 6000, // Duration of each individual slide.
 		fadeDuration: 1000, // Duration of the fading transition. Should be shorter than slideDuration.
 		animate: true, // Turn css animations on or off.
 		pauseOnTabBlur: true, // Pause the slideshow when the tab is out of focus. This prevents glitches with setTimeout().
