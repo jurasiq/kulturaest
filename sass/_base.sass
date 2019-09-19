@@ -169,3 +169,28 @@ a
 		text-decoration: none
 		background: #fff
 		color: #8DC63F
+
+.close-popup
+	position: absolute
+	width: 22px
+	height: 22px
+	cursor: pointer
+	transition: all .3s
+	&::before, &::after
+		content: ''
+		display: block
+		position: absolute
+		top: 50%
+		margin-top: -1.5px
+		left: 50%
+		margin-left: -10px
+		width: 20px
+		height: 3px
+		background-color: $body-bg
+		border-radius: 1px
+	&:before
+		transform: rotate(-45deg)
+	&:after
+		transform: rotate(45deg)
+	&:hover
+		transform: rotate(360deg)

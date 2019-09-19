@@ -49,7 +49,8 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplayTimeout: 8000,
 		smartSpeed: 2000,
-		animateOut: 'fadeOut'
+		animateOut: 'fadeOut',
+		autoplayHoverPause: true
 	});
 
 	// открыть по кнопке

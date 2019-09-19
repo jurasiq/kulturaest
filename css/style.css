@@ -268,6 +268,44 @@ a:hover {
   color: #8DC63F;
 }
 
+.close-popup {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.close-popup::before, .close-popup::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 3px;
+  background-color: #00033a;
+  border-radius: 1px;
+}
+
+.close-popup:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.close-popup:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close-popup:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 header {
   width: 100%;
   height: 100vh;
@@ -387,6 +425,70 @@ header {
 .small-logo-width, .small-logo-width:after {
   content: url(../img/small-logo.png) !important;
   width: 32px !important;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 3, 58, 0.8);
+  padding: 60px 30px;
+  z-index: 11;
+}
+
+.mobile-nav .close-popup {
+  position: absolute;
+  right: 30px !important;
+  top: 40px;
+}
+
+.mobile-nav .close-popup::before, .mobile-nav .close-popup::after {
+  background: #fff;
+  width: 28px;
+}
+
+.mobile-nav .mobile-links {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 5rem 0 2rem;
+}
+
+.mobile-nav .mobile-links a {
+  display: block;
+}
+
+.mobile-nav .mobile-links a img {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav ul li {
+  list-style-type: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 2rem;
 }
 
 .st-about {
@@ -629,6 +731,7 @@ header {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 12;
 }
 
 .overlay .popup {
@@ -645,49 +748,14 @@ header {
           box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
+.overlay .popup .close-popup {
+  top: 20px;
+  left: 20px;
+}
+
 .overlay .popup h2 {
   font-size: 3rem;
   margin-bottom: 40px;
-}
-
-.overlay .popup .close-popup {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 22px;
-  height: 22px;
-  cursor: pointer;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.overlay .popup .close-popup::before, .overlay .popup .close-popup::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5px;
-  left: 50%;
-  margin-left: -10px;
-  width: 20px;
-  height: 3px;
-  background-color: #00033a;
-  border-radius: 1px;
-}
-
-.overlay .popup .close-popup:before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.overlay .popup .close-popup:after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.overlay .popup .close-popup:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
 }
 
 .overlay .popup .callback {
