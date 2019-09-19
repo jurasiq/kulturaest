@@ -1,17 +1,24 @@
 $(document).ready(function () {
 
-	$('.menu-btn').on('click', function () {
-		$(this).toggleClass('menu-btn_active');
-		$('.nav').toggleClass('nav_active');
-		if ($(document).scrollTop() == 0) {
-			$('.navbar').toggleClass('navbar_active');
-		}
 
-		// change logo size on menu click
-		if ($(this).hasClass('menu-btn_active')) {
-			show_big_logo();
-		} else if ($(document).scrollTop() > 0) {
-			show_small_logo();
+
+	$('.menu-btn').on('click', function () {
+		
+		if (typeof is_mobile !== "undefined" && is_mobile) {
+			$('.mobile-nav').fadeIn();
+		} else {
+			$(this).toggleClass('menu-btn_active');
+			$('.nav').toggleClass('nav_active');
+			if ($(document).scrollTop() == 0) {
+				$('.navbar').toggleClass('navbar_active');
+			}
+
+			// change logo size on menu click
+			if ($(this).hasClass('menu-btn_active')) {
+				show_big_logo();
+			} else if ($(document).scrollTop() > 0) {
+				show_small_logo();
+			}
 		}
 	});
 
@@ -62,6 +69,12 @@ $(document).ready(function () {
 	// закрыть на крестик
 	$('.close-popup').click(function () {
 		$('.overlay').fadeOut();
+	});
+
+	// закрыть на крестик мобильное меню
+	$('.mobile-nav .close-popup').click(function () {
+		$('.mobile-nav').fadeOut();
+		$('.menu-btn').show();
 	});
 
 	// закрыть по клику вне окна
