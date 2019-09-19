@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 	$('#slider-header').slideshow({
 		randomize: false, // Randomize the play order of the slides.
-		slideDuration: 6000, // Duration of each induvidual slide.
+		slideDuration: 6000, // Duration of each individual slide.
 		fadeDuration: 1000, // Duration of the fading transition. Should be shorter than slideDuration.
 		animate: true, // Turn css animations on or off.
 		pauseOnTabBlur: true, // Pause the slideshow when the tab is out of focus. This prevents glitches with setTimeout().
@@ -26,12 +26,20 @@ $(document).ready(function () {
 
 	$("#slider-news").owlCarousel({
 		center: true,
-		items: 4,
-		nav: true,
 		dots: false,
 		loop: true,
 		margin: 36,
-		navText: ['<i class="far fa-arrow-alt-circle-left"></i>', '<i class="far fa-arrow-alt-circle-right"></i>']
+		navText: ['<i class="far fa-arrow-alt-circle-left"></i>', '<i class="far fa-arrow-alt-circle-right"></i>'],
+		responsive: {
+			0: {
+				items: 1,
+				nav: true
+			},
+			992: {
+				items: 4,
+				nav: true,
+			},
+		}
 	});
 
 	$("#slider-info").owlCarousel({
@@ -41,7 +49,8 @@ $(document).ready(function () {
 		autoplay: true,
 		autoplayTimeout: 8000,
 		smartSpeed: 2000,
-		animateOut: 'fadeOut'
+		animateOut: 'fadeOut',
+		autoplayHoverPause: true
 	});
 
 	// открыть по кнопке

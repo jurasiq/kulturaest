@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/style.css" />
 
 	<!--Scrips-->
+	<script src="libs/jquery/jquery-3.4.1.min.js"></script>
 	<script src="https://kit.fontawesome.com/b7fdb3574b.js"></script>
 </head>
 
@@ -39,18 +40,16 @@
 		<div class="navbar">
 			<div class="container-fluid">
 				<div class="row align-items-center">
-					<div class="col-md-3">
+					<div class="col-10 col-md-3">
 						<div class="links">
 							<div class="menu-btn"><span></span></div>
 							<a href="#" class="main-logo"></a>
-							<a href="#" class="message"><img class="message_icon" src="img/message_icon.svg"
-									alt="Написать сообщение" /></a>
-							<a href="#" class="instagram"><img class="instagram_icon" src="img/instagram_icon.svg" alt="Instagram" />
-							</a>
+							<a href="#" class="message"><img class="message_icon" src="img/message_icon.svg"alt="Написать сообщение" /></a>
+							<a href="#" class="instagram"><img class="instagram_icon" src="img/instagram_icon.svg" alt="Instagram" /></a>
 							<a href="#" class="vkontakte"><img class="vk_icon" src="img/vk_icon.svg" alt="Vkontakte" /></a>
 						</div>
 					</div>
-					<div class="col-md-9">
+					<div class="col-md-9 d-none d-md-block">
 						<ul class="nav">
 							<li><a href="#">главная</a></li>
 							<li><a href="#">адреса</a></li>
@@ -94,17 +93,34 @@
 		<div class="hd-title-sign">
 			<img src="img/title-sign.svg" alt="Культурное движение за правильное питание!" />
 		</div>
+
+			<div class="mobile-nav">
+				<div class="close-popup"></div>
+				<div class="mobile-links">
+					<a href="#" class="message"><img class="message_icon" src="img/message_icon.svg"alt="Написать сообщение" /></a>
+					<a href="#" class="instagram"><img class="instagram_icon" src="img/instagram_icon.svg" alt="Instagram" /></a>
+					<a href="#" class="vkontakte"><img class="vk_icon" src="img/vk_icon.svg" alt="Vkontakte" /></a>
+				</div>
+				<ul>
+					<li><a href="#">главная</a></li>
+					<li><a href="#">адреса</a></li>
+					<li><a href="#">вакансии</a></li>
+					<li><a href="#">программа лояльности</a></li>
+					<li><a href="#">новости и акции</a></li>
+				</ul>
+			</div>
+
 	</header>
 
 	<section class="st-about">
 		<div class="container-fluid">
 			<div class="row justify-content-center align-items-center">
-				<div class="col-md-3">
+				<div class="col-4 col-md-3">
 					<div class="plate wow fadeInLeft" data-wow-offset="300" data-wow-duration=".5s">
 						<img src="img/img_plate.png" alt="КультураЕсть" />
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-8 col-md-3">
 					<div class="abouttext wow fadeInRight" data-wow-offset="300" data-wow-duration=".5s">
 						«Культура есть» – сеть экомаркетов с большим выбором полезных
 						продуктов и натуральной косметики. Мы внимательно подходим к тому,
@@ -113,32 +129,30 @@
 				</div>
 			</div>
 			<h3 class="text-center wow fadeInUp" data-wow-offset="300" data-wow-duration=".5s">
-				Ассортимент для экомаркетов «Культура есть»<br />всегда подбиратеся по
-				четырём критериям:
-			</h3>
+				Ассортимент для экомаркетов «Культура есть» всегда подбиратеся по четырём критериям:</h3>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-6 col-md-3">
 					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".2s"
 						data-wow-duration=".5s">
 						<img src="img/polezno.svg" alt="Полезно" />
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-6 col-md-3">
 					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".4s"
 						data-wow-duration=".5s">
 						<img src="img/ecologichno.svg" alt="Экологично" />
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-6 col-md-3">
 					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".6s"
 						data-wow-duration=".5s">
-						<img src="img/naturalno.svg" alt="" />
+						<img src="img/naturalno.svg" alt="Натурально" />
 					</div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-6 col-md-3">
 					<div class="advantage-item text-center wow fadeInUp" data-wow-offset="300" data-wow-delay=".8s"
 						data-wow-duration=".5s">
-						<img src="img/pravilno.svg" alt="" />
+						<img src="img/pravilno.svg" alt="Правильно" />
 					</div>
 				</div>
 			</div>
@@ -207,8 +221,7 @@
 		<a href="#" class="base-btn">смотреть всё</a>
 
 		<div class="owl-carousel owl-theme" id="slider-info">
-			<div class="info-item">
-				<img src="img/info/slide_1.jpg" alt="Info" />
+			<div class="info-item" style="background-image: url(img/info/slide_1.jpg)">
 				<div class="info-desc">
 					<h4>Знания</h4>
 					<p>
@@ -218,8 +231,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="info-item">
-				<img src="img/info/slide_2.jpg" alt="Info" />
+			<div class="info-item" style="background-image: url(img/info/slide_2.jpg)">
 				<div class="info-desc">
 					<h4>Ассортимент</h4>
 					<p>
@@ -229,8 +241,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="info-item">
-				<img src="img/info/slide_3.jpg" alt="Info" />
+			<div class="info-item" style="background-image: url(img/info/slide_3.jpg)">
 				<div class="info-desc">
 					<h4>Качество</h4>
 					<p>
@@ -240,8 +251,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="info-item">
-				<img src="img/info/slide_4.jpg" alt="Info" />
+			<div class="info-item" style="background-image: url(img/info/slide_4.jpg)">
 				<div class="info-desc">
 					<h4>Выгода</h4>
 					<p>
@@ -257,7 +267,7 @@
 	<footer class="footer">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-12 col-md-3">
 					<div class="vk-group">
 						<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
 						<!-- VK Widget -->
@@ -277,7 +287,7 @@
 						</script>
 					</div>
 				</div>
-				<div class="col-md-7">
+				<div class="col-6 col-md-7">
 					<div class="footer-nav">
 						<ul class="bottom-menu">
 							<li><a href="#">главная</a></li>
@@ -294,7 +304,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2">
+				<div class="col-6 col-md-2">
 					<div class="arrow-up">
 						<div class="arrow-up-icon">
 							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 30 30" version="1.1"
@@ -364,7 +374,6 @@
 </body>
 
 <!--Vendor scripts-->
-<script src="libs/jquery/jquery-3.4.1.min.js"></script>
 <script src="libs/owlcarousel2/owl.carousel.min.js"></script>
 <script src="libs/subtle-slideshow-ken-burns-effect/jquery.subtle-slideshow.js"></script>
 <script src="libs/animate-css/wow.min.js"></script>
