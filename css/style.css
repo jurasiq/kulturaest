@@ -301,11 +301,6 @@ a:hover {
           transform: rotate(45deg);
 }
 
-.close-popup:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
 header {
   width: 100%;
   height: 100vh;
@@ -749,8 +744,8 @@ header {
 }
 
 .overlay .popup .close-popup {
-  top: 20px;
-  left: 20px;
+  top: 30px;
+  left: 30px;
 }
 
 .overlay .popup h2 {
