@@ -301,10 +301,16 @@ a:hover {
           transform: rotate(45deg);
 }
 
-header {
+.header {
   width: 100%;
   height: 100vh;
   margin: 0 0 100px;
+  padding: 0;
+}
+
+.header-sec {
+  width: 100%;
+  margin: 0;
   padding: 0;
 }
 
@@ -812,6 +818,85 @@ header {
 
 .send {
   margin-top: 40px;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  padding-top: 10vh;
+}
+
+.content .contact-side-panel {
+  display: block;
+  width: 27.7vw;
+  position: absolute;
+  left: 2.3vw;
+}
+
+.content .contact-side-panel .addresses {
+  margin-top: 30px;
+}
+
+.content .contact-side-panel .addresses .address {
+  margin: 0 0 14px;
+  padding: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: 1px solid #00033a;
+}
+
+.content .contact-side-panel .addresses .address li {
+  display: block;
+  list-style-type: none;
+}
+
+.content .contact-side-panel .addresses .address li p {
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.content .contact-side-panel .addresses .address li p span {
+  margin-right: 8px;
+  margin-bottom: -4px;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.content .contact-side-panel .addresses .address li p strong {
+  color: #8EC640;
+}
+
+.content .contact-side-panel .addresses .address:hover {
+  border: 1px solid #8EC640;
+}
+
+.mapmarker {
+  width: 15px;
+  height: 17px;
+  background: url(../img/mapmarker.svg) no-repeat;
+}
+
+.phone {
+  width: 17px;
+  height: 17px;
+  background: url(../img/phone-icon.svg) no-repeat;
+}
+
+.clock {
+  width: 17px;
+  height: 17px;
+  background: url(../img/clock-icon.svg) no-repeat;
+}
+
+.contact-map {
+  width: 70vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  background: url(../img/temp-map.jpg) no-repeat;
+  background-size: cover;
 }
 
 /*==========  Desktop First  ==========*/
