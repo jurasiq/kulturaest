@@ -449,7 +449,7 @@ header {
 
 .mobile-nav .close-popup::before, .mobile-nav .close-popup::after {
   background: #fff;
-  width: 28px;
+  width: 24px;
 }
 
 .mobile-nav .mobile-links {
@@ -919,6 +919,41 @@ header {
   }
   .footer .arrow-up .arrow-up-icon {
     top: 30px;
+  }
+  .overlay .popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .overlay .popup .close-popup {
+    position: absolute;
+    left: 87vw !important;
+    top: 40px;
+  }
+  .overlay .popup .close-popup::before, .overlay .popup .close-popup::after {
+    width: 24px;
+  }
+  .overlay .popup .callback h2 {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+  }
+  .overlay .popup .callback .file {
+    margin-top: 20px;
+  }
+  .overlay .popup .callback .textarea {
+    height: 100px;
+    margin-top: 15px;
+  }
+  .overlay .popup .callback .sec-btn {
+    margin-top: 20px;
   }
 }
 
