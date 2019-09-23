@@ -485,7 +485,7 @@ a:hover {
 	width: 100%;
 	-ms-flex-pack: distribute;
 	justify-content: space-around;
-	margin: 5rem 0 2rem;
+	margin: 3rem 0 1rem;
 }
 
 .mobile-nav .mobile-links a {
@@ -513,7 +513,7 @@ a:hover {
 	list-style-type: none;
 	font-size: 1.8rem;
 	font-weight: bold;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 }
 
 .st-about {
