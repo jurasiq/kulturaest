@@ -906,7 +906,7 @@ a:hover {
 /*480*/
 @media (max-width: 480px) {
   .header {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
   .navbar {
     background: rgba(0, 3, 58, 0.8);
@@ -919,18 +919,23 @@ a:hover {
   }
   .hd-image-bg {
     width: 100%;
-    height: 73vh;
+    height: 62vh;
   }
   .hd-title-sign {
     width: 85%;
-    left: 9vw;
-    bottom: 2vh;
+    left: 8vw;
+    bottom: 7vh;
   }
   .st-about {
     margin-bottom: 50px;
     padding-top: 40px;
   }
+  .st-about .plate {
+    margin-left: 15px;
+    margin-right: -15px;
+  }
   .st-about .abouttext {
+    margin-right: 15px;
     font-size: 0.85rem;
   }
   .st-about h3 {
@@ -946,7 +951,7 @@ a:hover {
     margin-top: 30px;
   }
   .st-news {
-    margin-bottom: 50px;
+    margin: 0;
   }
   .st-news h2 {
     font-size: 2.2rem;
@@ -957,13 +962,13 @@ a:hover {
   }
   .st-news #slider-news {
     margin: 30px 0 50px;
-    padding: 0 15px;
+    padding: 0 30px;
   }
   .st-news .owl-nav {
     max-width: 100%;
   }
   .st-news #slider-info .info-item {
-    height: 60vh;
+    height: 70vh;
   }
   .st-news #slider-info .info-item .info-desc {
     max-width: 75%;
@@ -971,8 +976,8 @@ a:hover {
     padding: 20px;
   }
   .st-news #slider-info .owl-dots .owl-dot span {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     margin: 6px 30px;
   }
   .footer .vk-group {
