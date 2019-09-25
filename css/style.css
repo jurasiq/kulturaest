@@ -35,6 +35,20 @@ body::after {
   content: url(../img/main-logo.png) url(../img/small-logo.png);
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #54567A;
+  outline: 1px solid #00033a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #8dc63f;
+  border-radius: 4px;
+}
+
 a {
   text-decoration: none;
   color: #fff;
