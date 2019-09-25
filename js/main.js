@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
-
+	if (typeof is_mobile !== "undefined" && is_mobile) {
+		$('body').addClass('mobile');
+	}
 
 	$('.menu-btn').on('click', function () {
 		
