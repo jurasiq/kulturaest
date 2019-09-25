@@ -512,11 +512,7 @@ a:hover {
 
 .st-about h3 {
   margin: 70px 0;
-<<<<<<< HEAD
   padding: 0 25%;
-=======
-  padding: 0 20%;
->>>>>>> e1f9973d91ab11e6b0111d223641e8d7c8c24225
   font-size: 1.84rem;
   line-height: 1.2;
 }
@@ -839,8 +835,6 @@ a:hover {
 
 .content .contact-side-panel .addresses {
   margin-top: 30px;
-<<<<<<< HEAD
-=======
   height: 77vh;
   overflow: auto;
 }
@@ -857,7 +851,6 @@ a:hover {
 .content .contact-side-panel .addresses::-webkit-scrollbar-thumb {
   background: #8dc63f;
   border-radius: 4px;
->>>>>>> e1f9973d91ab11e6b0111d223641e8d7c8c24225
 }
 
 .content .contact-side-panel .addresses .address {
@@ -866,6 +859,7 @@ a:hover {
   -webkit-transition: all .3s;
   transition: all .3s;
   border: 1px solid #00033a;
+  cursor: pointer;
 }
 
 .content .contact-side-panel .addresses .address li {
@@ -889,11 +883,7 @@ a:hover {
   color: #8EC640;
 }
 
-<<<<<<< HEAD
-.content .contact-side-panel .addresses .address:hover {
-=======
 .content .contact-side-panel .addresses .address:hover, .content .contact-side-panel .addresses .address.address-selected {
->>>>>>> e1f9973d91ab11e6b0111d223641e8d7c8c24225
   border: 1px solid #8EC640;
 }
 
