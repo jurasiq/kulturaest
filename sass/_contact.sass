@@ -9,6 +9,16 @@
 		padding: 0 30px
 		.addresses
 			margin-top: 30px
+			height: 77vh
+			overflow: auto
+			&::-webkit-scrollbar
+				width: 6px
+			&::-webkit-scrollbar-track
+				background: #54567A
+				outline: 1px solid $body-bg
+			&::-webkit-scrollbar-thumb
+				background: $active-color
+				border-radius: 4px
 			.address
 				margin: 0 0 14px
 				padding: 20px
@@ -27,7 +37,7 @@
 							line-height: 1.2
 						strong
 							color: #8EC640
-				&:hover
+				&:hover, &.address-selected
 					border: 1px solid #8EC640
 .mapmarker
 	width: 15px
