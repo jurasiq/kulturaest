@@ -466,17 +466,10 @@ body.mobile .navbar.navbar_active .menu-btn {
 }
 
 .st-about h3 {
-<<<<<<< HEAD
   margin: 70px 0;
   padding: 0 25%;
   font-size: 1.84rem;
   line-height: 1.2;
-=======
-	margin: 70px 0;
-	padding: 0 25%;
-	font-size: 1.84rem;
-	line-height: 1.2;
->>>>>>> 664b03210cfa57e20f28e0e298dc24853c48ff38
 }
 
 .st-about .advantage-item img {
@@ -775,15 +768,9 @@ body.mobile .navbar.navbar_active .menu-btn {
 }
 
 .content .contact-side-panel .addresses {
-<<<<<<< HEAD
   margin-top: 30px;
   height: 77vh;
   overflow: auto;
-=======
-	margin-top: 30px;
-	height: 77vh;
-	overflow: auto;
->>>>>>> 664b03210cfa57e20f28e0e298dc24853c48ff38
 }
 
 .content .contact-side-panel .addresses::-webkit-scrollbar {
@@ -796,19 +783,6 @@ body.mobile .navbar.navbar_active .menu-btn {
 }
 
 .content .contact-side-panel .addresses::-webkit-scrollbar-thumb {
-<<<<<<< HEAD
-  background: #8dc63f;
-  border-radius: 4px;
-}
-
-.content .contact-side-panel .addresses .address {
-  margin: 0 0 14px;
-  padding: 20px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  border: 1px solid #00033a;
-  cursor: pointer;
-=======
 	background: #8dc63f;
 	border-radius: 4px;
 }
@@ -818,7 +792,6 @@ body.mobile .navbar.navbar_active .menu-btn {
 	padding: 20px;
 	transition: all 0.3s;
 	border: 1px solid #00033a;
->>>>>>> 664b03210cfa57e20f28e0e298dc24853c48ff38
 }
 
 .content .contact-side-panel .addresses .address li {
@@ -843,11 +816,7 @@ body.mobile .navbar.navbar_active .menu-btn {
 }
 
 .content .contact-side-panel .addresses .address:hover, .content .contact-side-panel .addresses .address.address-selected {
-<<<<<<< HEAD
-  border: 1px solid #8EC640;
-=======
 	border: 1px solid #8EC640;
->>>>>>> 664b03210cfa57e20f28e0e298dc24853c48ff38
 }
 
 .mapmarker {
