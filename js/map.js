@@ -43,12 +43,25 @@ ymaps.ready(function () {
 			});
 		}
 
+		// events for clicking on addresses
 		for (key in addresses) {
 			var addr = addresses[key];
 			$('#'+addr["id"]).click({coords:addr["coordinates"]}, function(e){
 				$('.address').removeClass('address-selected');
 				$(this).addClass('address-selected');
-				myMap.setCenter(e.data.coords, 15, {duration: 1000});		
+				
+				if (typeof is_mobile !== "undefined" && is_mobile) {
+					$('html, body').animate({
+					    	scrollTop: $("#map").offset().top
+						}, 
+						200, 
+						function(){ 
+							myMap.setCenter(e.data.coords, 15, {duration: 1000})
+					});
+				} else {
+					myMap.setCenter(e.data.coords, 15, {duration: 1000})
+				};
+
 			});
 		}
 	});
