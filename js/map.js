@@ -54,13 +54,9 @@ ymaps.ready(function () {
 				$(this).addClass('address-selected');
 				
 				if (typeof is_mobile !== "undefined" && is_mobile) {
-					$('html, body').animate({
-					    	scrollTop: $("#map").offset().top
-						}, 
-						200, 
-						function(){ 
-							myMap.setCenter(e.data.coords, 15, {duration: 1000})
-					});
+					myMap.setCenter(e.data.coords, 15, {duration: 0}).then(function(){
+						$('html, body').animate({scrollTop: $("#map").offset().top},400) 
+					})
 				} else {
 					myMap.setCenter(e.data.coords, 15, {duration: 1000})
 				};
