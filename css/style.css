@@ -965,15 +965,17 @@ body.mobile .navbar.navbar_active .menu-btn {
   }
   .hd-image-bg {
     width: 100%;
-    height: 58vh;
+    height: 50vh;
+    margin-top: 12vh;
   }
   .hd-title-sign {
-    width: 85%;
-    left: 8vw;
+    width: 80%;
+    left: 10vw;
     bottom: 3vh;
   }
   .st-about {
-    margin: 8vh 0;
+    margin: 0;
+    padding: 5vh 0;
   }
   .st-about .plate {
     margin-left: 15px;
@@ -1015,7 +1017,7 @@ body.mobile .navbar.navbar_active .menu-btn {
     margin-top: 2vh;
   }
   .st-news #slider-info .info-item {
-    height: 70vh;
+    height: 75vh;
   }
   .st-news #slider-info .info-item .info-desc {
     max-width: 75%;
@@ -1031,7 +1033,7 @@ body.mobile .navbar.navbar_active .menu-btn {
     margin: 6px 30px;
   }
   .footer {
-    padding: 8vh 0 5vh;
+    padding: 10vh 0 5vh;
   }
   .footer .vk-group {
     margin-bottom: 5vh;
