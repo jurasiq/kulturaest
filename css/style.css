@@ -745,7 +745,7 @@ body.mobile .navbar.navbar_active .menu-btn {
 
 .footer .arrow-up .logo-kalachi img {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .footer .arrow-up .logo-kalachi span {
@@ -965,16 +965,15 @@ body.mobile .navbar.navbar_active .menu-btn {
   }
   .hd-image-bg {
     width: 100%;
-    height: 62vh;
+    height: 58vh;
   }
   .hd-title-sign {
     width: 85%;
     left: 8vw;
-    bottom: 7vh;
+    bottom: 3vh;
   }
   .st-about {
-    margin-bottom: 50px;
-    padding-top: 40px;
+    margin: 8vh 0;
   }
   .st-about .plate {
     margin-left: 15px;
@@ -985,7 +984,7 @@ body.mobile .navbar.navbar_active .menu-btn {
     font-size: 0.85rem;
   }
   .st-about h3 {
-    margin: 40px 0;
+    margin: 8vh 0 1vh;
     padding: 0;
     font-size: 1.15rem;
   }
@@ -994,24 +993,26 @@ body.mobile .navbar.navbar_active .menu-btn {
     padding-right: 0;
   }
   .st-about .col-6 .advantage-item {
-    margin-top: 30px;
+    margin-top: 4vh;
   }
   .st-news {
     margin: 0;
   }
   .st-news h2 {
     font-size: 2.2rem;
+    margin-top: 6vh;
   }
   .st-news .base-btn {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    -webkit-transform: translateY(-83px);
+            transform: translateY(-83px);
   }
   .st-news #slider-news {
-    margin: 30px 0 50px;
+    margin: 3vh 0 5vh;
     padding: 0 30px;
   }
   .st-news .owl-nav {
     max-width: 100%;
+    margin-top: 2vh;
   }
   .st-news #slider-info .info-item {
     height: 70vh;
@@ -1021,13 +1022,19 @@ body.mobile .navbar.navbar_active .menu-btn {
     min-height: 233px;
     padding: 20px;
   }
+  .st-news #slider-info .owl-dots {
+    margin-top: 3vh;
+  }
   .st-news #slider-info .owl-dots .owl-dot span {
     width: 20px;
     height: 20px;
     margin: 6px 30px;
   }
+  .footer {
+    padding: 8vh 0 5vh;
+  }
   .footer .vk-group {
-    margin-bottom: 30px;
+    margin-bottom: 5vh;
   }
   .footer .footer-nav {
     padding-left: 15px;
@@ -1045,6 +1052,7 @@ body.mobile .navbar.navbar_active .menu-btn {
         -ms-flex-align: start;
             align-items: flex-start;
     font-size: 0.6rem;
+    line-height: 12px;
   }
   .footer .footer-nav .logo-footer img {
     margin-bottom: 10px;

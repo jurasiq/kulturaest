@@ -13,9 +13,9 @@ ymaps.ready(function () {
 			$("#addresses").append(htmlAddress);
 			mapPoints[addr["id"]] = new ymaps.Placemark(addr['coordinates'], {iconContent: addr["id"]}, {
 															iconLayout: 'default#image',
-															iconImageHref: 'img/small-logo.png',
-															iconImageSize: [48, 48],
-															iconImageOffset: [-24, -24],
+															iconImageHref: 'img/map-logo.png',
+															iconImageSize: [48, 60],
+															iconImageOffset: [-24, -30],
 															
 														});
 		});
