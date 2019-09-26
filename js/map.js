@@ -15,7 +15,7 @@ ymaps.ready(function () {
 															iconLayout: 'default#image',
 															iconImageHref: 'img/map-logo.png',
 															iconImageSize: [48, 60],
-															iconImageOffset: [-24, -30],
+															iconImageOffset: [-24, -60],
 															
 														});
 		});
