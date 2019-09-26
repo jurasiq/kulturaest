@@ -3,6 +3,7 @@ ymaps.ready(function () {
 	$.getJSON("js/map_data.json", function(json) {
 		addresses = json['addresses'];
 		var mapPoints = [];
+		var pointCollection = new ymaps.GeoObjectCollection(null, {});
 		addresses.forEach(function(addr){
 			var htmlAddress = "<ul class='address' id='"+addr["id"]+"'>";
 			htmlAddress += "<li><p><span><strong>М</strong></span>"+addr["metro"]+"</p></li>";
@@ -18,6 +19,7 @@ ymaps.ready(function () {
 															iconImageOffset: [-24, -60],
 															
 														});
+			pointCollection.add(mapPoints[addr["id"]]);
 		});
 		
 		var myMap = new ymaps.Map('map', {
@@ -26,15 +28,16 @@ ymaps.ready(function () {
 			}, {
 				searchControlProvider: 'yandex#search'
 		});
+		
+		
 
 		if (typeof is_mobile !== "undefined" && is_mobile) {
 			myMap.behaviors.disable('drag');
 		}
 		
-		for (var key in mapPoints) {
-			myMap.geoObjects.add(mapPoints[key]);
-		};
-		
+		myMap.geoObjects.add(pointCollection);
+
+		myMap.setBounds(pointCollection.getBounds(),{zoomMargin:50});
 
 		// events for clicking on marks
 		for (key in mapPoints) {
@@ -54,13 +57,9 @@ ymaps.ready(function () {
 				$(this).addClass('address-selected');
 				
 				if (typeof is_mobile !== "undefined" && is_mobile) {
-					$('html, body').animate({
-					    	scrollTop: $("#map").offset().top
-						}, 
-						200, 
-						function(){ 
-							myMap.setCenter(e.data.coords, 15, {duration: 1000})
-					});
+					myMap.setCenter(e.data.coords, 15, {duration: 0}).then(function(){
+						$('html, body').animate({scrollTop: $("#map").offset().top},400) 
+					})
 				} else {
 					myMap.setCenter(e.data.coords, 15, {duration: 1000})
 				};
