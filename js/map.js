@@ -37,7 +37,7 @@ ymaps.ready(function () {
 		
 		myMap.geoObjects.add(pointCollection);
 
-		myMap.setBounds(pointCollection.getBounds());
+		myMap.setBounds(pointCollection.getBounds(),{zoomMargin:50});
 
 		// events for clicking on marks
 		for (key in mapPoints) {
