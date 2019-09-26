@@ -27,6 +27,9 @@ ymaps.ready(function () {
 				searchControlProvider: 'yandex#search'
 		});
 
+		if (typeof is_mobile !== "undefined" && is_mobile) {
+			myMap.behaviors.disable('drag');
+		}
 		
 		for (var key in mapPoints) {
 			myMap.geoObjects.add(mapPoints[key]);
