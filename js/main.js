@@ -24,43 +24,49 @@ $(document).ready(function () {
 		}
 	});
 
-	$('#slider-header').slideshow({
-		randomize: false, // Randomize the play order of the slides.
-		slideDuration: 6000, // Duration of each individual slide.
-		fadeDuration: 1000, // Duration of the fading transition. Should be shorter than slideDuration.
-		animate: true, // Turn css animations on or off.
-		pauseOnTabBlur: true, // Pause the slideshow when the tab is out of focus. This prevents glitches with setTimeout().
-		enableLog: false // Enable log messages to the console. Useful for debugging.
-	});
+	if ($('#slider-header').length) {
+		$('#slider-header').slideshow({
+			randomize: false, // Randomize the play order of the slides.
+			slideDuration: 6000, // Duration of each individual slide.
+			fadeDuration: 1000, // Duration of the fading transition. Should be shorter than slideDuration.
+			animate: true, // Turn css animations on or off.
+			pauseOnTabBlur: true, // Pause the slideshow when the tab is out of focus. This prevents glitches with setTimeout().
+			enableLog: false // Enable log messages to the console. Useful for debugging.
+		});
+	}
 
-	$("#slider-news").owlCarousel({
-		center: true,
-		dots: false,
-		loop: true,
-		margin: 36,
-		navText: ['<i class="far fa-arrow-alt-circle-left"></i>', '<i class="far fa-arrow-alt-circle-right"></i>'],
-		responsive: {
-			0: {
-				items: 1,
-				nav: true
-			},
-			992: {
-				items: 4,
-				nav: true,
-			},
-		}
-	});
+	if ($('#slider-news').length) {
+		$("#slider-news").owlCarousel({
+			center: true,
+			dots: false,
+			loop: true,
+			margin: 36,
+			navText: ['<i class="far fa-arrow-alt-circle-left"></i>', '<i class="far fa-arrow-alt-circle-right"></i>'],
+			responsive: {
+				0: {
+					items: 1,
+					nav: true
+				},
+				992: {
+					items: 4,
+					nav: true,
+				},
+			}
+		});
+	}
 
-	$("#slider-info").owlCarousel({
-		items: 1,
-		dots: true,
-		loop: true,
-		autoplay: true,
-		autoplayTimeout: 8000,
-		smartSpeed: 2000,
-		animateOut: 'fadeOut',
-		autoplayHoverPause: true
-	});
+	if ($('#slider-info').length) {
+		$("#slider-info").owlCarousel({
+			items: 1,
+			dots: true,
+			loop: true,
+			autoplay: true,
+			autoplayTimeout: 8000,
+			smartSpeed: 2000,
+			animateOut: 'fadeOut',
+			autoplayHoverPause: true
+		});
+	}
 
 	// открыть по кнопке
 	$('.message').click(function () {
