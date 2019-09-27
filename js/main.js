@@ -1,5 +1,5 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
 	if (typeof is_mobile !== "undefined" && is_mobile) {
 		$('body').addClass('mobile');
 	}
@@ -68,10 +68,42 @@ $(document).ready(function () {
 		});
 	}
 
-	// открыть по кнопке
+	if ($('#slider-vacancies').length) {
+		$("#slider-vacancies").owlCarousel({
+			items: 1,
+			dots: false,
+			loop: true,
+			autoplay: true,
+			autoplayTimeout: 8000,
+			smartSpeed: 2000,
+			animateOut: 'fadeOut',
+			autoplayHoverPause: true
+		});
+	}
+
+	if ($('#slider-vacancies-m').length) {
+		$("#slider-vacancies-m").owlCarousel({
+			items: 1,
+			dots: false,
+			loop: true,
+			autoplay: true,
+			autoplayTimeout: 8000,
+			smartSpeed: 2000,
+			animateOut: 'fadeOut',
+			autoplayHoverPause: true
+		});
+	}
+
+	// открыть форму обратной связи
 	$('.message').click(function () {
-		$('.overlay').fadeIn();
-		$('.overlay').addClass('disabled');
+		$('#contactform').fadeIn();
+		$('#contactform').addClass('disabled');
+	});
+
+	// открыть анкету вакансии
+	$('.vacancy-form').click(function () {
+		$('#vacancyform').fadeIn();
+		$('#vacancyform').addClass('disabled');
 	});
 
 	// закрыть на крестик

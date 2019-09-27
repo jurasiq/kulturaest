@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
 	<link rel="stylesheet" href="libs/owlcarousel2/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="libs/owlcarousel2/assets/owl.theme.default.min.css" />
-	<link rel="stylesheet" href="libs/subtle-slideshow-ken-burns-effect/subtle-slideshow.css" />
 	<link rel="stylesheet" href="libs/animate-css/animate.min.css">
 
 	<!--Custom style-->
@@ -80,13 +79,75 @@
 			</div>
 	</header>
 
-<div class="content">
-	<div class="contact-side-panel">
-		<h2>Адреса</h2>
-		<div class="addresses" id="addresses">
+<div class="wrapper">
+	<div class="breadcrumb"><a href="/">Главная</a><span> > </span><a href="#" class="active">Вакансии</a></div>
+	<h2 class="h2">Вакансии</h2>
+	<div class="owl-carousel owl-theme d-none d-md-block" id="slider-vacancies">
+		<div class="slide-vacant-item" style="background-image: url(img/vacancies/slide_01.jpg)"></div>
+		<div class="slide-vacant-item" style="background-image: url(img/vacancies/slide_02.jpg)"></div>
+		<div class="slide-vacant-item" style="background-image: url(img/vacancies/slide_03.jpg)"></div>
+		<div class="slide-vacant-item" style="background-image: url(img/vacancies/slide_04.jpg)"></div>
+	</div>
+	<div class="owl-carousel owl-theme d-block d-md-none" id="slider-vacancies-m">
+		<div class="slide-vacant-item" style="background-image: url(img/vacancies/slide_01m.jpg)"></div>
+		<div class="slide-vacant-item" style="background-image: url(img/vacancies/slide_02m.jpg)"></div>
+		<div class="slide-vacant-item" style="background-image: url(img/vacancies/slide_03m.jpg)"></div>
+		<div class="slide-vacant-item" style="background-image: url(img/vacancies/slide_04m.jpg)"></div>
+	</div>
+	<div class="all-vacancies">
+		<div class="vacancy-desc">
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-10">
+						<h3 class="h3">Продавец-консультант</h3>
+						<strong>Должностные обязанности:</strong>
+						<p>
+							— Продажа натуральных продуктов, косметики и бытовой нехимии.<br>
+							— Работа с покупателями: консультирование покупателей, презентация товара, проведение акций и дегустаций.<br>
+							— Работа с товаром: заказ, приемка, расстановка по залу.<br>
+							— Работа с кассой (программа 1С Розница 2.2.).<br>
+							— Соблюдать работу по стандартам компании.<br>
+							— Отчетность.<br>
+							— Поддержание чистоты в зале.
+						</p>
+						<strong>Требования:</strong>
+						<p>
+							— Ориентация на клиента, коммуникабельность.<br>
+							— Правильная, грамотная речь.<br>
+							— Активная жизненная позиция, позитивное мышление, желание зарабатывать.<br>
+							— Знание рынка эко-продукции будет вашим преимуществом.<br>
+							— Опрятность.
+						</p>
+						<strong>Условия:</strong>
+						<p>
+							— Интересная работа на модном рынке ЗОЖ и ПП.<br>
+							— Работа в комфортных условиях (современный, красивый, чистый зал, обустроенная зона отдыха).<br>
+							— Оплата: выход и % от выручки магазина за смену. На собеседовании подробно проговариваем структуру мотивации.<br>
+							— Компания гарантирует стабильную, достойную и своевременную заработную плату, выплаты 2 раза в месяц (аванс - получка).<br>
+							— График работы 3/3.<br>
+							— Обязательное предварительное обучение 4 дня (по 4 часа).<br>
+							— Дружный, молодой коллектив.
+						</p>
+						<strong>Плюсы работы в сети «Культура есть»:</strong>
+						<p>
+							— Официальное оформление по ТК РФ.<br>
+							— Оплата больничных листов, оплачиваемый отпуск 28 дней.<br>
+							— Стабильная выплата заработной платы 2 раза в месяц.<br>
+							— Профессиональное развитие и повышение квалификации.<br>
+							— Знание последних тенденций на рынке ЗОЖ и ПП.<br>
+							— Возможность карьерного роста.<br>
+							— Качественная фирменная спецодежда каждому сотруднику.<br>
+							— Возможность подработки.<br>
+							— Подарки сотрудникам на праздники.<br>
+							— Скидки на продукцию компании.<br>
+							— Корпоративные мероприятия.<br>
+						</p>
+						<a href="#" class="base-btn vacancy-form">запонить анкету</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="contact-map" id="map"></div>
 </div>
 
 	<footer class="footer">
@@ -150,7 +211,7 @@
 		</div>
 	</footer>
 
-	<div class="overlay">
+	<div class="overlay" id="contactform">
 		<div class="popup">
 			<form action="#" method="post" id="form1" class="callback ajax_form" enctype="multipart/form-data">
 				<h2 class="text-center">Написать нам</h2>
@@ -191,9 +252,54 @@
 					</div>
 				</div>
 			</form>
+
 			<div class="close-popup"><span></span></div>
 		</div>
 
+	</div>
+	<div class="overlay" id="vacancyform">
+		<div class="popup">
+			<form action="#" method="post" id="form1" class="vacancy ajax_form" enctype="multipart/form-data">
+				<h2 class="text-center">Заполнить анкету</h2>
+				<div class="row justify-content-between align-items-center">
+					<div class="col-md-5">
+						<input class="hidden" type="text" name="user" placeholder="">
+						<input class="hidden" type="text" name="username" placeholder="">
+						<input type="text" name="surname" placeholder="Фамилия*" class="input">
+						<input type="text" name="name" placeholder="Имя*" class="input">
+						<input type="text" name="age" placeholder="Возраст*" class="input">
+						<input type="tel" name="phone" placeholder="Телефон*" class="input">
+						<input type="email" name="email" placeholder="E-mail*" class="input">
+						<div class="file">
+							<img src="img/attach.svg" alt="Прикрепить файлы">
+							<span>.pdf, .docx, .rtf до 10Мб</span>
+						</div>
+						<input type="file" id="upload" class="hide inputfile" data-multiple-caption="{count} files selected" accept="application/pdf,application/msword,application/rtf" multiple />
+						<label for="upload" class="sec-btn"><span>прикрепить резюме</span></label>
+					</div>
+					<div class="col-md-6">
+						<input type="text" name="citizenship" placeholder="Гражданство*" class="input">
+						<p>Работаете ли вы в настоящее время?*</p>
+						<div class="radio-work">
+							<label class="work">
+								<input type="radio" class="radio-p" name="worked" value="Да">
+								<span class="radio-custom"></span>
+								<span class="label">Да</span>
+							</label>
+							<label class="work">
+								<input type="radio" class="radio-p" name="worked" value="Нет">
+								<span class="radio-custom"></span>
+								<span class="label">Нет</span>
+							</label>
+						</div>
+						<textarea class="textarea d-none d-md-block" type="text" name="text" placeholder="Дополнительно по желанию"></textarea>
+						<button type="submit" class="sec-btn">отправить</button>
+					</div>
+				</div>
+			</form>
+
+			<div class="close-popup"><span></span></div>
+		</div>
 	</div>
 
 </body>
@@ -202,8 +308,6 @@
 <script src="libs/owlcarousel2/owl.carousel.min.js"></script>
 <script src="libs/subtle-slideshow-ken-burns-effect/jquery.subtle-slideshow.js"></script>
 <script src="libs/animate-css/wow.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.1.72/?lang=ru_RU&amp;apikey=51c6eb34-6edd-4071-bcc5-1380a095588e" type="text/javascript"></script>
-<script src="js/map.js" type="text/javascript"></script>
 <script>
 	new WOW().init();
 </script>

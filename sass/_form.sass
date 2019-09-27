@@ -1,6 +1,6 @@
 .overlay
 	display: none
-	position: absolute
+	position: fixed
 	width: 100%
 	height: 100vh
 	top: 0
@@ -55,6 +55,61 @@
 				color: $body-bg
 				width: 100%
 				height: 200px
+		.vacancy
+			display: block
+			position: relative
+			.select, .input
+				display: block
+				width: 100%
+				height: 32px
+				border: none
+				border-bottom: 1px solid $body-bg
+				color: $body-bg
+				padding: 4px
+				margin-bottom: 10px
+			.radio-work
+				.work
+					margin-right: 45px
+					.radio-p
+						display: none
+					.radio-custom
+						display: inline-block
+						width: 25px
+						height: 25px
+						border: 1px solid #00033a
+						border-radius: 50%
+						position: relative
+					.radio-p:checked+.radio-custom::before
+						content: ''
+						display: block
+						position: absolute
+						top: 4px
+						right: 4px
+						bottom: 4px
+						left: 4px
+						background: #8dc63f
+						border-radius: 50%
+
+			.file
+				display: flex
+				align-items: center
+				font-size: 12px
+				line-height: 12px
+				margin: 15px 0 8px
+				img
+					display: inline-block
+					width: 13.2px
+					height: 22px
+					margin-right: 10px
+				span
+					display: inline-block
+			.textarea
+				display: block
+				border: none
+				border-bottom: 1px solid $body-bg
+				color: $body-bg
+				width: 100%
+				height: 84px
 			button
 				margin-top: 46px
 

@@ -49,6 +49,25 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 
+body .h2 {
+  font-size: 1.9rem;
+}
+
+body .breadcrumb {
+  margin: 0 30px 15px;
+  color: #8dc63f;
+}
+
+body .breadcrumb a {
+  text-decoration: underline;
+  color: #8dc63f;
+}
+
+body .breadcrumb a.active {
+  text-decoration: none;
+  color: #fff;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -755,7 +774,7 @@ body.mobile .navbar.navbar_active .menu-btn {
 
 .overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -836,7 +855,84 @@ body.mobile .navbar.navbar_active .menu-btn {
   height: 200px;
 }
 
-.overlay .popup .callback button {
+.overlay .popup .vacancy {
+  display: block;
+  position: relative;
+}
+
+.overlay .popup .vacancy .select, .overlay .popup .vacancy .input {
+  display: block;
+  width: 100%;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #00033a;
+  color: #00033a;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.overlay .popup .vacancy .radio-work .work {
+  margin-right: 45px;
+}
+
+.overlay .popup .vacancy .radio-work .work .radio-p {
+  display: none;
+}
+
+.overlay .popup .vacancy .radio-work .work .radio-custom {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #00033a;
+  border-radius: 50%;
+  position: relative;
+}
+
+.overlay .popup .vacancy .radio-work .work .radio-p:checked + .radio-custom::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  background: #8dc63f;
+  border-radius: 50%;
+}
+
+.overlay .popup .vacancy .file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 15px 0 8px;
+}
+
+.overlay .popup .vacancy .file img {
+  display: inline-block;
+  width: 13.2px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.overlay .popup .vacancy .file span {
+  display: inline-block;
+}
+
+.overlay .popup .vacancy .textarea {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #00033a;
+  color: #00033a;
+  width: 100%;
+  height: 84px;
+}
+
+.overlay .popup .vacancy button {
   margin-top: 46px;
 }
 
@@ -943,6 +1039,36 @@ body.mobile .navbar.navbar_active .menu-btn {
   overflow: hidden;
   background: url(../img/temp-map.jpg) no-repeat;
   background-size: cover;
+}
+
+.wrapper {
+  padding-top: 12vh;
+}
+
+.wrapper .h2 {
+  margin: 0 30px 40px;
+}
+
+.wrapper #slider-vacancies .slide-vacant-item, .wrapper #slider-vacancies-m .slide-vacant-item {
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper .all-vacancies {
+  position: relative;
+  overflow: auto;
+  margin: 5vh 0;
+}
+
+.wrapper .all-vacancies .vacancy-desc h3 {
+  text-transform: uppercase;
+  margin-bottom: 3vh;
+}
+
+.wrapper .all-vacancies .vacancy-desc .base-btn {
+  margin-top: 2vh;
+  cursor: pointer;
 }
 
 /*==========  Desktop First  ==========*/
@@ -1087,18 +1213,18 @@ body.mobile .navbar.navbar_active .menu-btn {
   .overlay .popup .close-popup::before, .overlay .popup .close-popup::after {
     width: 24px;
   }
-  .overlay .popup .callback h2 {
+  .overlay .popup .callback h2, .overlay .popup .vacancy h2 {
     margin: 1.5rem 0;
     font-size: 2rem;
   }
-  .overlay .popup .callback .file {
+  .overlay .popup .callback .file, .overlay .popup .vacancy .file {
     margin-top: 20px;
   }
-  .overlay .popup .callback .textarea {
+  .overlay .popup .callback .textarea, .overlay .popup .vacancy .textarea {
     height: 80px;
     margin-top: 15px;
   }
-  .overlay .popup .callback .sec-btn {
+  .overlay .popup .callback .sec-btn, .overlay .popup .vacancy .sec-btn {
     margin-top: 10px;
   }
   .content {
