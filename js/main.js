@@ -168,33 +168,31 @@ $(window).on('load', function () {
 
 ;
 (function ($, window, document, undefined) {
-	$('.inputfile').each(function () {
+
+	$('.inputfile').on('change', function (e) {
 		var $input = $(this),
 			$label = $input.next('label'),
 			labelVal = $label.html(),
 			$labelName = $input.prev('div.file').find('span');
+		if (this.files && this.files.length > 1)
+			fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+		else if (e.target.value)
+			fileName = e.target.value.split('\\').pop();
 
-		$input.on('change', function (e) {
-			var fileName = '';
+		if (fileName)
+			$labelName.html(fileName);
+		else
+			$labelName.html(labelVal);
+	})
+		
 
-			if (this.files && this.files.length > 1)
-				fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-			else if (e.target.value)
-				fileName = e.target.value.split('\\').pop();
-
-			if (fileName)
-				$labelName.html(fileName);
-			else
-				$labelName.html(labelVal);
+	// Firefox bug fix
+	$('.inputfile')
+		.on('focus', function () {
+			$(this).addClass('has-focus');
+		})
+		.on('blur', function () {
+			$(this).removeClass('has-focus');
 		});
 
-		// Firefox bug fix
-		$input
-			.on('focus', function () {
-				$input.addClass('has-focus');
-			})
-			.on('blur', function () {
-				$input.removeClass('has-focus');
-			});
-	});
 })(jQuery, window, document);
