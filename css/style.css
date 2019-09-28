@@ -55,15 +55,22 @@ body .h2 {
 
 body .breadcrumb {
   margin: 0 30px 15px;
+  padding: 0;
   color: #8dc63f;
+  list-style-type: none;
 }
 
-body .breadcrumb a {
+body .breadcrumb li {
+  display: inline-block;
+  padding: 0;
+}
+
+body .breadcrumb li a {
   text-decoration: underline;
   color: #8dc63f;
 }
 
-body .breadcrumb a.active {
+body .breadcrumb li.active {
   text-decoration: none;
   color: #fff;
 }
@@ -852,7 +859,12 @@ body.mobile .navbar.navbar_active .menu-btn {
   border-bottom: 1px solid #00033a;
   color: #00033a;
   width: 100%;
-  height: 200px;
+  height: 239px;
+}
+
+.overlay .popup .callback .sec-btn {
+  background-color: #fff;
+  margin-top: 15px;
 }
 
 .overlay .popup .vacancy {
@@ -933,7 +945,7 @@ body.mobile .navbar.navbar_active .menu-btn {
 }
 
 .overlay .popup .vacancy button {
-  margin-top: 46px;
+  margin-top: 40px;
 }
 
 .sec-btn {
