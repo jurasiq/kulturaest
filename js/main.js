@@ -68,6 +68,19 @@ $(document).ready(function () {
 		});
 	}
 
+	if ($('#slider-info-m').length) {
+		$("#slider-info-m").owlCarousel({
+			items: 1,
+			dots: true,
+			loop: true,
+			autoplay: true,
+			autoplayTimeout: 8000,
+			smartSpeed: 2000,
+			animateOut: 'fadeOut',
+			autoplayHoverPause: true
+		});
+	}
+
 	if ($('#slider-vacancies').length) {
 		$("#slider-vacancies").owlCarousel({
 			items: 1,
