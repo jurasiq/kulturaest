@@ -31,23 +31,23 @@ body
 .scroll-hidden
 	overflow: hidden
 	
-	.h2
-		font-size: 1.9rem
+.h2
+	font-size: 1.9rem
 
-	.breadcrumb
-		margin: 0 30px 15px
+.breadcrumb
+	margin: 0 30px 15px
+	padding: 0
+	color: $active-color
+	list-style-type: none
+	li
+		display: inline-block
 		padding: 0
-		color: $active-color
-		list-style-type: none
-		li
-			display: inline-block
-			padding: 0
-			a
-				text-decoration: underline
-				color: $active-color
-			&.active
-				text-decoration: none
-				color: #fff
+		a
+			text-decoration: underline
+			color: $active-color
+		&.active
+			text-decoration: none
+			color: #fff
 
 a
 	text-decoration: none
@@ -230,3 +230,17 @@ button, button:visited, button:focus, button:active, button:hover
 		transform: rotate(-45deg)
 	&:after
 		transform: rotate(45deg)
+
+.temp
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 70vh
+	.close-btn
+		display: block
+		position: absolute
+		top: 30px
+		left: 30px
+		width: 24px
+		height: 24px
+		font-size: 22px
