@@ -7,6 +7,9 @@ $(document).ready(function () {
 	$('.menu-btn').on('click', function () {
 		
 		if (typeof is_mobile !== "undefined" && is_mobile) {
+			$('body').addClass('scroll-hidden')
+			$('body > *:not(header):not(.overlay)').addClass('blur')
+			$('body .navbar').addClass('blur')
 			$('.mobile-nav').fadeIn();
 		} else {
 			$(this).toggleClass('menu-btn_active');
@@ -111,25 +114,32 @@ $(document).ready(function () {
 	$('.message').click(function () {
 		$('#contactform').fadeIn();
 		$('#contactform').addClass('disabled');
+		
 		$('body').addClass('scroll-hidden')
-		$('body > *:not(.overlay)').addClass('blur')
+		$('body > *:not(.overlay):not(header)').addClass('blur')
 	});
 
 	// открыть анкету вакансии
 	$('.vacancy-form').click(function () {
 		$('#vacancyform').fadeIn();
 		$('#vacancyform').addClass('disabled');
+
+		$('body').addClass('scroll-hidden')
+		$('body > *:not(.overlay):not(header)').addClass('blur')
 	});
 
 	// закрыть на крестик
 	$('.close-popup').click(function () {
 		$('.overlay').fadeOut();
 		$('body').removeClass('scroll-hidden');
-		$('body > *:not(.overlay)').removeClass('blur')
+		if (!(typeof is_mobile !== "undefined" && is_mobile && $('.mobile-nav').is(":visible"))) $('.blur').removeClass('blur');
 	});
 
 	// закрыть на крестик мобильное меню
 	$('.mobile-nav .close-popup').click(function () {
+		$('body').removeClass('scroll-hidden')
+		$('.blur').removeClass('blur')
+
 		$('.mobile-nav').fadeOut();
 		$('.menu-btn').show();
 	});
