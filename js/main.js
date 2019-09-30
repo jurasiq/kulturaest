@@ -111,6 +111,8 @@ $(document).ready(function () {
 	$('.message').click(function () {
 		$('#contactform').fadeIn();
 		$('#contactform').addClass('disabled');
+		$('body').addClass('scroll-hidden')
+		$('body > *:not(.overlay)').addClass('blur')
 	});
 
 	// открыть анкету вакансии
@@ -122,6 +124,8 @@ $(document).ready(function () {
 	// закрыть на крестик
 	$('.close-popup').click(function () {
 		$('.overlay').fadeOut();
+		$('body').removeClass('scroll-hidden');
+		$('body > *:not(.overlay)').removeClass('blur')
 	});
 
 	// закрыть на крестик мобильное меню
