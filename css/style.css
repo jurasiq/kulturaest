@@ -49,28 +49,34 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 
-body .h2 {
+.scroll-hidden {
+  overflow: hidden;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.scroll-hidden .h2 {
   font-size: 1.9rem;
 }
 
-body .breadcrumb {
+.scroll-hidden .breadcrumb {
   margin: 0 30px 15px;
   padding: 0;
   color: #8dc63f;
   list-style-type: none;
 }
 
-body .breadcrumb li {
+.scroll-hidden .breadcrumb li {
   display: inline-block;
   padding: 0;
 }
 
-body .breadcrumb li a {
+.scroll-hidden .breadcrumb li a {
   text-decoration: underline;
   color: #8dc63f;
 }
 
-body .breadcrumb li.active {
+.scroll-hidden .breadcrumb li.active {
   text-decoration: none;
   color: #fff;
 }
@@ -82,6 +88,14 @@ a {
 
 a:hover {
   color: #fff;
+}
+
+a, a:visited, a:focus, a:active, a:hover {
+  outline: 0 none !important;
+}
+
+button, button:visited, button:focus, button:active, button:hover {
+  outline: 0 none !important;
 }
 
 .text-center {
@@ -960,7 +974,7 @@ body.mobile .navbar.navbar_active .menu-btn {
 .content {
   width: 100%;
   height: 100vh;
-  padding-top: 15vh;
+  padding-top: 12vh;
 }
 
 .content .contact-side-panel {
