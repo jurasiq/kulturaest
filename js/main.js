@@ -111,7 +111,8 @@ $(document).ready(function () {
 	}
 
 	// открыть форму обратной связи
-	$('.message').click(function () {
+	$('.message').click(function (e) {
+		e.preventDefault();
 		$('#contactform').fadeIn();
 		$('#contactform').addClass('disabled');
 		
@@ -120,7 +121,8 @@ $(document).ready(function () {
 	});
 
 	// открыть анкету вакансии
-	$('.vacancy-form').click(function () {
+	$('.vacancy-form').click(function (e) {
+		e.preventDefault();
 		$('#vacancyform').fadeIn();
 		$('#vacancyform').addClass('disabled');
 
