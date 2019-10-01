@@ -635,17 +635,22 @@ body.mobile .navbar.navbar_active .menu-btn {
   z-index: 10;
 }
 
-.st-news #slider-news {
+#slider-news {
   margin: 50px 0 100px;
 }
 
-.st-news #slider-news .news-item .news-img {
+.news-item .news-img {
   position: relative;
   overflow: hidden;
   margin-bottom: 10px;
 }
 
-.st-news #slider-news .news-item .news-img .news-descr {
+.news-item .news-img img {
+  display: block;
+  max-width: 100%;
+}
+
+.news-item .news-img .news-descr {
   position: absolute;
   top: 0;
   left: 0;
@@ -660,7 +665,7 @@ body.mobile .navbar.navbar_active .menu-btn {
   transition: all .3s;
 }
 
-.st-news #slider-news .news-item .news-img .news-descr span {
+.news-item .news-img .news-descr span {
   display: block;
   position: absolute;
   left: 6%;
@@ -673,13 +678,13 @@ body.mobile .navbar.navbar_active .menu-btn {
   margin-bottom: 10px;
 }
 
-.st-news #slider-news .news-item .news-img .news-descr .sec-btn {
+.news-item .news-img .news-descr .sec-btn {
   position: absolute;
   left: 6%;
   bottom: 8%;
 }
 
-.st-news #slider-news .news-item .date {
+.news-item .date {
   text-align: center;
   margin-top: 15px;
   font-size: 18px;
@@ -687,15 +692,15 @@ body.mobile .navbar.navbar_active .menu-btn {
   transition: all .3s;
 }
 
-.st-news #slider-news .news-item:hover .news-descr {
+.news-item:hover .news-descr {
   opacity: 1;
 }
 
-.st-news #slider-news .news-item:hover .date {
+.news-item:hover .date {
   color: #8dc63f;
 }
 
-.st-news #slider-info .info-item, .st-news #slider-info-m .info-item {
+#slider-info .info-item, #slider-info-m .info-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -712,7 +717,7 @@ body.mobile .navbar.navbar_active .menu-btn {
   background-size: cover;
 }
 
-.st-news #slider-info .info-item .info-desc, .st-news #slider-info-m .info-item .info-desc {
+#slider-info .info-item .info-desc, #slider-info-m .info-item .info-desc {
   text-align: left;
   display: inline-block;
   max-width: 35%;
@@ -723,13 +728,13 @@ body.mobile .navbar.navbar_active .menu-btn {
   background-blend-mode: multiply;
 }
 
-.st-news #slider-info .info-item .info-desc h4, .st-news #slider-info-m .info-item .info-desc h4 {
+#slider-info .info-item .info-desc h4, #slider-info-m .info-item .info-desc h4 {
   font-size: 30px;
   line-height: 30px;
   margin: 0 0 10px;
 }
 
-.st-news #slider-info .info-item .info-desc p, .st-news #slider-info-m .info-item .info-desc p {
+#slider-info .info-item .info-desc p, #slider-info-m .info-item .info-desc p {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
