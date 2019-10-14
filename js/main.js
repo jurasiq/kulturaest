@@ -165,11 +165,13 @@ $(document).ready(function () {
 
 // change logo after scroll
 function show_small_logo() {
-	$('.main-logo').addClass('small-logo-width');
+	$('.main-logo').hide();
+	$('.small-logo').show();
 }
 
 function show_big_logo() {
-	$('.main-logo').removeClass('small-logo-width');
+	$('.small-logo').hide();
+	$('.main-logo').show();
 }
 
 function check_scroll() {
