@@ -8,7 +8,7 @@ $(document).ready(function () {
 		
 		if (typeof is_mobile !== "undefined" && is_mobile) {
 			$('body').addClass('scroll-hidden')
-			$('body > *:not(header):not(.overlay)').addClass('blur')
+			$('body > *:not(header):not(.overlay), header > *:not(.mobile-nav)').addClass('blur')
 			$('body .navbar').addClass('blur')
 			$('.mobile-nav').fadeIn();
 		} else {
@@ -111,21 +111,23 @@ $(document).ready(function () {
 	}
 
 	// открыть форму обратной связи
-	$('.message').click(function () {
+	$('.message').click(function (e) {
+		e.preventDefault();
 		$('#contactform').fadeIn();
 		$('#contactform').addClass('disabled');
 		
 		$('body').addClass('scroll-hidden')
-		$('body > *:not(.overlay):not(header)').addClass('blur')
+		$('body > *:not(.overlay):not(header), header > *:not(.mobile-nav)').addClass('blur')
 	});
 
 	// открыть анкету вакансии
-	$('.vacancy-form').click(function () {
+	$('.vacancy-form').click(function (e) {
+		e.preventDefault();
 		$('#vacancyform').fadeIn();
 		$('#vacancyform').addClass('disabled');
 
 		$('body').addClass('scroll-hidden')
-		$('body > *:not(.overlay):not(header)').addClass('blur')
+		$('body > *:not(.overlay):not(header), header > *:not(.mobile-nav)').addClass('blur')
 	});
 
 	// закрыть на крестик
@@ -149,6 +151,8 @@ $(document).ready(function () {
 		var popup = $('.popup');
 		if (e.target != popup[0] && popup.has(e.target).length === 0) {
 			$('.overlay').fadeOut();
+			$('body').removeClass('scroll-hidden');
+			if (!(typeof is_mobile !== "undefined" && is_mobile && $('.mobile-nav').is(":visible"))) $('.blur').removeClass('blur');
 		}
 	});
 
@@ -163,11 +167,13 @@ $(document).ready(function () {
 
 // change logo after scroll
 function show_small_logo() {
-	$('.main-logo').addClass('small-logo-width');
+	$('.main-logo').hide();
+	$('.small-logo').show();
 }
 
 function show_big_logo() {
-	$('.main-logo').removeClass('small-logo-width');
+	$('.small-logo').hide();
+	$('.main-logo').show();
 }
 
 function check_scroll() {
